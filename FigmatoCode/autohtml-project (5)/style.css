@@ -1,0 +1,2669 @@
+._6-waste-bank-latest-activities,
+._6-waste-bank-latest-activities * {
+  box-sizing: border-box;
+}
+._6-waste-bank-latest-activities {
+  background: var(
+    --white-blue-zodiac,
+    linear-gradient(to left, #0a192f, #0a192f),
+    linear-gradient(to left, #ffffff, #ffffff)
+  );
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.main-content-wrapper {
+  padding: 128px 24px 96px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--item-spacing-m, 32px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  max-width: var(--width-1440, 1440px);
+  min-height: var(--height-1200, 1200px);
+  position: relative;
+}
+.hero-search-area {
+  background: var(--color-azure-16-70, rgba(17, 34, 64, 0.7));
+  border-radius: 16px;
+  border-style: solid;
+  border-color: var(--color-white-5, rgba(255, 255, 255, 0.05));
+  border-width: 1px;
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0px 4px 20px -2px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+}
+.container {
+  opacity: 0.3;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 49.93%;
+  position: absolute;
+  right: 0.07%;
+  left: 50%;
+  bottom: 1px;
+  top: 1px;
+}
+.abstract-green-and-navy-wave-pattern-environmental-theme-subtle-gradient {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+}
+.container2 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--item-spacing-s, 16px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 663px;
+  position: relative;
+}
+.heading-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.latest-activities-updates {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(--semantic-heading-1-font-family, "Inter-Bold", sans-serif);
+  font-size: var(--semantic-heading-1-font-size, 48px);
+  line-height: var(--semantic-heading-1-line-height, 48px);
+  letter-spacing: var(--semantic-heading-1-letter-spacing, -1.2px);
+  font-weight: var(--semantic-heading-1-font-weight, 700);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container3 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.stay-informed-about-our-latest-community-initiatives-waste-bank-achievements-and-environmental-education-events-across-kota-batu {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 16px);
+  line-height: var(--inter-regular-line-height, 26px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container4 {
+  padding: 8px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  max-width: var(--width-448, 448px);
+  position: relative;
+}
+.input {
+  background: var(--color-azure-16-80, rgba(17, 34, 64, 0.8));
+  border-radius: 12px;
+  border-style: solid;
+  border-color: var(--color-white-10, rgba(255, 255, 255, 0.1));
+  border-width: 1px;
+  padding: 15px 16px 16px 44px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+.container5 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.search-activities-events-or-news {
+  color: var(--color-azure-47, #64748b);
+  text-align: left;
+  font-family: var(--semantic-input-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--semantic-input-font-size, 14px);
+  font-weight: var(--semantic-input-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container6 {
+  padding: 0px 0px 0px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  top: 8px;
+}
+.container7 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.img {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  overflow: visible;
+}
+.button {
+  background: var(--color-spring-green-39, #10b981);
+  border-radius: 8px;
+  padding: 8.5px 16px 9.5px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: absolute;
+  right: 6.02px;
+  bottom: 6px;
+  top: 14px;
+}
+.search {
+  color: var(--color-white-solid, #ffffff);
+  text-align: center;
+  font-family: var(--semantic-button-font-family, "Inter-Medium", sans-serif);
+  font-size: var(--semantic-button-font-size, 14px);
+  line-height: var(--semantic-button-line-height, 20px);
+  font-weight: var(--semantic-button-font-weight, 500);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container8 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 442px;
+  position: relative;
+}
+.filters {
+  background: var(--color-azure-16-40, rgba(17, 34, 64, 0.4));
+  border-radius: 12px;
+  border-style: solid;
+  border-color: var(--color-white-5, rgba(255, 255, 255, 0.05));
+  border-width: 1px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--item-spacing-12, 12px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  backdrop-filter: blur(6px);
+}
+.heading-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.filter-activities {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(--semantic-link-font-family, "Inter-SemiBold", sans-serif);
+  font-size: var(--semantic-link-font-size, 14px);
+  line-height: var(--semantic-link-line-height, 20px);
+  font-weight: var(--semantic-link-font-weight, 600);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container9 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--item-spacing-12, 12px);
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.container10 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+}
+.options {
+  background: var(--color-azure-11, #0a192f);
+  border-radius: 8px;
+  border-style: solid;
+  border-color: var(--color-white-10, rgba(255, 255, 255, 0.1));
+  border-width: 1px;
+  padding: 8px 16px 8px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.all-event-types {
+  color: var(--color-azure-84, #cbd5e1);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container11 {
+  padding: 0px 12px 0px 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+}
+.img2 {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  overflow: visible;
+}
+.all-months {
+  color: var(--color-azure-84, #cbd5e1);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.img3 {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  overflow: visible;
+}
+.featured-activity-highlight-postevand-style {
+  background: var(--color-azure-16-70, rgba(17, 34, 64, 0.7));
+  border-radius: 16px;
+  border-style: solid;
+  border-color: var(--color-spring-green-39-20, rgba(16, 185, 129, 0.2));
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0px 4px 20px -2px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+}
+.container12 {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  min-height: 695px;
+  position: relative;
+}
+.container13 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.high-quality-photo-of-a-community-waste-sorting-event-in-kota-batu-clear-blue-sky-people-wearing-green-vests-modern-bright-aesthetic {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+}
+.overlay {
+  background: var(--color-azure-16-50, rgba(17, 34, 64, 0.5));
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+}
+.margin {
+  padding: 0px 0px 16px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.container14 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--item-spacing-12, 12px);
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.background {
+  background: var(--color-spring-green-39, #10b981);
+  border-radius: 6px;
+  padding: 4px 12px 4px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.featured-event {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(--inter-bold-upper-font-family, "Inter-Bold", sans-serif);
+  font-size: var(--inter-bold-upper-font-size, 10px);
+  line-height: var(--inter-bold-upper-line-height, 15px);
+  letter-spacing: var(--inter-bold-upper-letter-spacing, 0.5px);
+  font-weight: var(--inter-bold-upper-font-weight, 700);
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container15 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--item-spacing-xs, 8px);
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.img4 {
+  flex-shrink: 0;
+  width: 12.25px;
+  height: 14px;
+  position: relative;
+  overflow: visible;
+}
+.october-15-2023 {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.heading-2-margin {
+  padding: 0px 0px 16px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.heading-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.kota-batu-city-wide-cleanup-drive-2023 {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(--semantic-heading-2-font-family, "Inter-Bold", sans-serif);
+  font-size: var(--semantic-heading-2-font-size, 36px);
+  line-height: var(--semantic-heading-2-line-height, 40px);
+  font-weight: var(--semantic-heading-2-font-weight, 700);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.margin2 {
+  padding: 0px 0px 32px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.over-5-000-citizens-joined-hands-across-24-villages-to-clear-plastic-waste-from-our-rivers-and-streets-setting-a-new-record-for-community-participation-in-environmental-conservation {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 18px);
+  line-height: var(--inter-regular-line-height, 28px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container16 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--item-spacing-s, 24px);
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.container17 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+._12-5 {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(--inter-bold-font-family, "Inter-Bold", sans-serif);
+  font-size: var(--inter-bold-font-size, 24px);
+  line-height: var(--inter-bold-line-height, 32px);
+  font-weight: var(--inter-bold-font-weight, 700);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.tons-collected {
+  margin: -0.5px 0 0 0;
+  color: var(--color-azure-47, #64748b);
+  text-align: left;
+  font-family: var(
+    --inter-regular-upper-font-family,
+    "Inter-Regular",
+    sans-serif
+  );
+  font-size: var(--inter-regular-upper-font-size, 12px);
+  line-height: var(--inter-regular-upper-line-height, 16px);
+  letter-spacing: var(--inter-regular-upper-letter-spacing, 0.6px);
+  font-weight: var(--inter-regular-upper-font-weight, 400);
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.vertical-divider {
+  background: var(--color-white-10, rgba(255, 255, 255, 0.1));
+  flex-shrink: 0;
+  width: 1px;
+  height: 40px;
+  position: relative;
+}
+._5-k {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(--inter-bold-font-family, "Inter-Bold", sans-serif);
+  font-size: var(--inter-bold-font-size, 24px);
+  line-height: var(--inter-bold-line-height, 32px);
+  font-weight: var(--inter-bold-font-weight, 700);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.volunteers {
+  margin: -0.5px 0 0 0;
+  color: var(--color-azure-47, #64748b);
+  text-align: left;
+  font-family: var(
+    --inter-regular-upper-font-family,
+    "Inter-Regular",
+    sans-serif
+  );
+  font-size: var(--inter-regular-upper-font-size, 12px);
+  line-height: var(--inter-regular-upper-line-height, 16px);
+  letter-spacing: var(--inter-regular-upper-letter-spacing, 0.6px);
+  font-weight: var(--inter-regular-upper-font-weight, 400);
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.link {
+  background: var(--color-azure-11, #0a192f);
+  border-radius: 8px;
+  border-style: solid;
+  border-color: var(--color-white-10, rgba(255, 255, 255, 0.1));
+  border-width: 1px;
+  padding: 12px 24px 12px 24px;
+  display: flex;
+  flex-direction: row;
+  gap: var(--item-spacing-xs, 8px);
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.read-full-story {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(--semantic-button-font-family, "Inter-Medium", sans-serif);
+  font-size: var(--semantic-button-font-size, 14px);
+  line-height: var(--semantic-button-line-height, 20px);
+  font-weight: var(--semantic-button-font-weight, 500);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.img5 {
+  flex-shrink: 0;
+  width: 10.5px;
+  height: 12px;
+  position: relative;
+  overflow: visible;
+}
+.container18 {
+  opacity: 0.05;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.img6 {
+  flex-shrink: 0;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: visible;
+}
+.activity-grid-gallery-masonry-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--item-spacing-s, 24px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.container19 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.heading-22 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.all-activities {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(
+    --semantic-heading-2-font-family,
+    "Inter-SemiBold",
+    sans-serif
+  );
+  font-size: var(--semantic-heading-2-font-size, 20px);
+  line-height: var(--semantic-heading-2-line-height, 28px);
+  font-weight: var(--semantic-heading-2-font-weight, 600);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.showing-1-6-of-42 {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container20 {
+  align-self: stretch;
+  flex-shrink: 0;
+  display: grid;
+  gap: 24px;
+  position: relative;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: 423px 411px;
+}
+.card-1 {
+  background: var(--color-azure-16-70, rgba(17, 34, 64, 0.7));
+  border-radius: 16px;
+  border-style: solid;
+  border-color: var(--color-white-5, rgba(255, 255, 255, 0.05));
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  box-shadow: 0px 4px 20px -2px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+.container21 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 192px;
+  position: relative;
+  overflow: hidden;
+}
+.school-children-learning-about-waste-sorting-with-colorful-bins-bright-and-educational-setting {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+}
+.overlay-border-overlay-blur {
+  background: var(--color-azure-11-80, rgba(10, 25, 47, 0.8));
+  border-radius: 6px;
+  border-style: solid;
+  border-color: var(--color-white-10, rgba(255, 255, 255, 0.1));
+  border-width: 1px;
+  padding: 4px 10px 4px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: absolute;
+  right: 11.62px;
+  top: 12px;
+  backdrop-filter: blur(2px);
+}
+.education {
+  color: var(--color-spring-green-52, #34d399);
+  text-align: left;
+  font-family: var(--inter-bold-upper-font-family, "Inter-Bold", sans-serif);
+  font-size: var(--inter-bold-upper-font-size, 10px);
+  line-height: var(--inter-bold-upper-line-height, 15px);
+  letter-spacing: var(--inter-bold-upper-letter-spacing, 0.5px);
+  font-weight: var(--inter-bold-upper-font-weight, 700);
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container22 {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.margin3 {
+  padding: 0px 0px 12px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.container23 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--item-spacing-xs, 8px);
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.img7 {
+  flex-shrink: 0;
+  width: 10.5px;
+  height: 12px;
+  position: relative;
+  overflow: visible;
+}
+.october-10-2023 {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 12px);
+  line-height: var(--inter-regular-line-height, 16px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.heading-3-margin {
+  padding: 0px 0px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.heading-32 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.waste-sorting-workshop-at-sdn-01-batu {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(
+    --semantic-heading-3-font-family,
+    "Inter-SemiBold",
+    sans-serif
+  );
+  font-size: var(--semantic-heading-3-font-size, 18px);
+  line-height: var(--semantic-heading-3-line-height, 28px);
+  font-weight: var(--semantic-heading-3-font-weight, 600);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container24 {
+  padding: 0px 0px 8.5px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.educating-the-next-generation-on-the-importance-of-separating-organic-and-inorganic-waste-right-from-the-classroom {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.horizontal-border {
+  border-style: solid;
+  border-color: var(--color-white-5, rgba(255, 255, 255, 0.05));
+  border-width: 1px 0px 0px 0px;
+  padding: 16px 0px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.container25 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--item-spacing-xxs, 4px);
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.read-more {
+  color: var(--color-spring-green-52, #34d399);
+  text-align: left;
+  font-family: var(--semantic-button-font-family, "Inter-Medium", sans-serif);
+  font-size: var(--semantic-button-font-size, 14px);
+  line-height: var(--semantic-button-line-height, 20px);
+  font-weight: var(--semantic-button-font-weight, 500);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.img8 {
+  flex-shrink: 0;
+  width: 8.75px;
+  height: 10px;
+  position: relative;
+  overflow: visible;
+}
+.container26 {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.background-border {
+  background: var(--color-azure-16, #112240);
+  border-radius: 9999px;
+  border-style: solid;
+  border-color: var(--color-white-10, rgba(255, 255, 255, 0.1));
+  border-width: 1px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+.img9 {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  overflow: visible;
+}
+.card-2 {
+  background: var(--color-azure-16-70, rgba(17, 34, 64, 0.7));
+  border-radius: 16px;
+  border-style: solid;
+  border-color: var(--color-white-5, rgba(255, 255, 255, 0.05));
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  box-shadow: 0px 4px 20px -2px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}
+.new-waste-bank-facility-inauguration-modern-building-official-ribbon-cutting-ceremony {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+}
+.overlay-border-overlay-blur2 {
+  background: var(--color-azure-11-80, rgba(10, 25, 47, 0.8));
+  border-radius: 6px;
+  border-style: solid;
+  border-color: var(--color-white-10, rgba(255, 255, 255, 0.1));
+  border-width: 1px;
+  padding: 4px 10px 4px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: absolute;
+  right: 12.52px;
+  top: 12px;
+  backdrop-filter: blur(2px);
+}
+.announcement {
+  color: var(--color-azure-68, #60a5fa);
+  text-align: left;
+  font-family: var(--inter-bold-upper-font-family, "Inter-Bold", sans-serif);
+  font-size: var(--inter-bold-upper-font-size, 10px);
+  line-height: var(--inter-bold-upper-line-height, 15px);
+  letter-spacing: var(--inter-bold-upper-letter-spacing, 0.5px);
+  font-weight: var(--inter-bold-upper-font-weight, 700);
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.img10 {
+  flex-shrink: 0;
+  width: 10.5px;
+  height: 12px;
+  position: relative;
+  overflow: visible;
+}
+.october-05-2023 {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 12px);
+  line-height: var(--inter-regular-line-height, 16px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.inauguration-of-new-central-waste-bank-facility {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(
+    --semantic-heading-3-font-family,
+    "Inter-SemiBold",
+    sans-serif
+  );
+  font-size: var(--semantic-heading-3-font-size, 18px);
+  line-height: var(--semantic-heading-3-line-height, 28px);
+  font-weight: var(--semantic-heading-3-font-weight, 600);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container27 {
+  padding: 0px 0px 4.5px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.the-mayor-officially-opens-the-new-state-of-the-art-sorting-and-processing-facility-to-handle-increased-city-capacity {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.horizontal-border2 {
+  border-style: solid;
+  border-color: var(--color-white-5, rgba(255, 255, 255, 0.05));
+  border-width: 1px 0px 0px 0px;
+  padding: 16px 0px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.img11 {
+  flex-shrink: 0;
+  width: 8.75px;
+  height: 10px;
+  position: relative;
+  overflow: visible;
+}
+.card-3 {
+  background: var(--color-azure-16-70, rgba(17, 34, 64, 0.7));
+  border-radius: 16px;
+  border-style: solid;
+  border-color: var(--color-white-5, rgba(255, 255, 255, 0.05));
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  box-shadow: 0px 4px 20px -2px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+}
+.community-members-exchanging-waste-for-cash-at-a-local-village-waste-bank-happy-faces {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+}
+.overlay-border-overlay-blur3 {
+  background: var(--color-azure-11-80, rgba(10, 25, 47, 0.8));
+  border-radius: 6px;
+  border-style: solid;
+  border-color: var(--color-white-10, rgba(255, 255, 255, 0.1));
+  border-width: 1px;
+  padding: 4px 10px 4px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: absolute;
+  right: 12.06px;
+  top: 12px;
+  backdrop-filter: blur(2px);
+}
+.community {
+  color: var(--color-yellow-53, #facc15);
+  text-align: left;
+  font-family: var(--inter-bold-upper-font-family, "Inter-Bold", sans-serif);
+  font-size: var(--inter-bold-upper-font-size, 10px);
+  line-height: var(--inter-bold-upper-line-height, 15px);
+  letter-spacing: var(--inter-bold-upper-letter-spacing, 0.5px);
+  font-weight: var(--inter-bold-upper-font-weight, 700);
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.img12 {
+  flex-shrink: 0;
+  width: 10.5px;
+  height: 12px;
+  position: relative;
+  overflow: visible;
+}
+.september-28-2023 {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 12px);
+  line-height: var(--inter-regular-line-height, 16px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.record-payouts-at-desa-oro-oro-ombo-waste-bank {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(
+    --semantic-heading-3-font-family,
+    "Inter-SemiBold",
+    sans-serif
+  );
+  font-size: var(--semantic-heading-3-font-size, 18px);
+  line-height: var(--semantic-heading-3-line-height, 28px);
+  font-weight: var(--semantic-heading-3-font-weight, 600);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container28 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.local-residents-successfully-converted-over-2-tons-of-recyclable-materials-into-economic-value-this-month {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.img13 {
+  flex-shrink: 0;
+  width: 8.75px;
+  height: 10px;
+  position: relative;
+  overflow: visible;
+}
+.img14 {
+  flex-shrink: 0;
+  width: 11.25px;
+  height: 10px;
+  position: relative;
+  overflow: visible;
+}
+.card-4 {
+  background: var(--color-azure-16-70, rgba(17, 34, 64, 0.7));
+  border-radius: 16px;
+  border-style: solid;
+  border-color: var(--color-white-5, rgba(255, 255, 255, 0.05));
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  box-shadow: 0px 4px 20px -2px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+.composting-workshop-showing-organic-waste-being-turned-into-fertilizer {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+}
+.overlay-border-overlay-blur4 {
+  background: var(--color-azure-11-80, rgba(10, 25, 47, 0.8));
+  border-radius: 6px;
+  border-style: solid;
+  border-color: var(--color-white-10, rgba(255, 255, 255, 0.1));
+  border-width: 1px;
+  padding: 4px 10px 4px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: absolute;
+  right: 12.7px;
+  top: 12px;
+  backdrop-filter: blur(2px);
+}
+.workshop {
+  color: var(--color-spring-green-52, #34d399);
+  text-align: left;
+  font-family: var(--inter-bold-upper-font-family, "Inter-Bold", sans-serif);
+  font-size: var(--inter-bold-upper-font-size, 10px);
+  line-height: var(--inter-bold-upper-line-height, 15px);
+  letter-spacing: var(--inter-bold-upper-letter-spacing, 0.5px);
+  font-weight: var(--inter-bold-upper-font-weight, 700);
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.img15 {
+  flex-shrink: 0;
+  width: 10.5px;
+  height: 12px;
+  position: relative;
+  overflow: visible;
+}
+.september-20-2023 {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 12px);
+  line-height: var(--inter-regular-line-height, 16px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mastering-home-composting-techniques {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(
+    --semantic-heading-3-font-family,
+    "Inter-SemiBold",
+    sans-serif
+  );
+  font-size: var(--semantic-heading-3-font-size, 18px);
+  line-height: var(--semantic-heading-3-line-height, 28px);
+  font-weight: var(--semantic-heading-3-font-weight, 600);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.a-hands-on-session-teaching-households-how-to-effectively-manage-organic-kitchen-waste-to-produce-high-quality-compost {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.img16 {
+  flex-shrink: 0;
+  width: 8.75px;
+  height: 10px;
+  position: relative;
+  overflow: visible;
+}
+.card-5 {
+  background: var(--color-azure-16-70, rgba(17, 34, 64, 0.7));
+  border-radius: 16px;
+  border-style: solid;
+  border-color: var(--color-white-5, rgba(255, 255, 255, 0.05));
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  box-shadow: 0px 4px 20px -2px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+.creative-products-made-from-recycled-plastic-artisan-market-setting {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+}
+.overlay-border-overlay-blur5 {
+  background: var(--color-azure-11-80, rgba(10, 25, 47, 0.8));
+  border-radius: 6px;
+  border-style: solid;
+  border-color: var(--color-white-10, rgba(255, 255, 255, 0.1));
+  border-width: 1px;
+  padding: 4px 10px 4px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: absolute;
+  right: 11.97px;
+  top: 12px;
+  backdrop-filter: blur(2px);
+}
+.exhibition {
+  color: var(--color-violet-75, #c084fc);
+  text-align: left;
+  font-family: var(--inter-bold-upper-font-family, "Inter-Bold", sans-serif);
+  font-size: var(--inter-bold-upper-font-size, 10px);
+  line-height: var(--inter-bold-upper-line-height, 15px);
+  letter-spacing: var(--inter-bold-upper-letter-spacing, 0.5px);
+  font-weight: var(--inter-bold-upper-font-weight, 700);
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.img17 {
+  flex-shrink: 0;
+  width: 10.5px;
+  height: 12px;
+  position: relative;
+  overflow: visible;
+}
+.september-12-2023 {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 12px);
+  line-height: var(--inter-regular-line-height, 16px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.upcycling-art-craft-exhibition {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(
+    --semantic-heading-3-font-family,
+    "Inter-SemiBold",
+    sans-serif
+  );
+  font-size: var(--semantic-heading-3-font-size, 18px);
+  line-height: var(--semantic-heading-3-line-height, 28px);
+  font-weight: var(--semantic-heading-3-font-weight, 600);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container29 {
+  padding: 0px 0px 16.5px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.showcasing-innovative-products-created-by-local-artisans-using-materials-sourced-entirely-from-our-waste-banks {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.img18 {
+  flex-shrink: 0;
+  width: 8.75px;
+  height: 10px;
+  position: relative;
+  overflow: visible;
+}
+.img19 {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  overflow: visible;
+}
+.card-6 {
+  background: var(--color-azure-16-70, rgba(17, 34, 64, 0.7));
+  border-radius: 16px;
+  border-style: solid;
+  border-color: var(--color-white-5, rgba(255, 255, 255, 0.05));
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  box-shadow: 0px 4px 20px -2px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+}
+.meeting-of-waste-bank-directors-formal-setting-discussing-strategies {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+}
+.overlay-border-overlay-blur6 {
+  background: var(--color-azure-11-80, rgba(10, 25, 47, 0.8));
+  border-radius: 6px;
+  border-style: solid;
+  border-color: var(--color-white-10, rgba(255, 255, 255, 0.1));
+  border-width: 1px;
+  padding: 4px 10px 4px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: absolute;
+  right: 12.58px;
+  top: 12px;
+  backdrop-filter: blur(2px);
+}
+.meeting {
+  color: var(--color-azure-68, #60a5fa);
+  text-align: left;
+  font-family: var(--inter-bold-upper-font-family, "Inter-Bold", sans-serif);
+  font-size: var(--inter-bold-upper-font-size, 10px);
+  line-height: var(--inter-bold-upper-line-height, 15px);
+  letter-spacing: var(--inter-bold-upper-letter-spacing, 0.5px);
+  font-weight: var(--inter-bold-upper-font-weight, 700);
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.img20 {
+  flex-shrink: 0;
+  width: 10.5px;
+  height: 12px;
+  position: relative;
+  overflow: visible;
+}
+.september-01-2023 {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 12px);
+  line-height: var(--inter-regular-line-height, 16px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.quarterly-waste-bank-directors-coordination {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(
+    --semantic-heading-3-font-family,
+    "Inter-SemiBold",
+    sans-serif
+  );
+  font-size: var(--semantic-heading-3-font-size, 18px);
+  line-height: var(--semantic-heading-3-line-height, 28px);
+  font-weight: var(--semantic-heading-3-font-weight, 600);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container30 {
+  padding: 0px 0px 20.5px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.aligning-strategies-and-sharing-best-practices-among-the-40-active-waste-bank-units-operating-across-the-city {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.img21 {
+  flex-shrink: 0;
+  width: 8.75px;
+  height: 10px;
+  position: relative;
+  overflow: visible;
+}
+.pagination {
+  padding: 24px 0px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.button2 {
+  background: var(--color-azure-16, #112240);
+  border-radius: 8px;
+  border-style: solid;
+  border-color: var(--color-white-10, rgba(255, 255, 255, 0.1));
+  border-width: 1px;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.img22 {
+  flex-shrink: 0;
+  width: 8.75px;
+  height: 14px;
+  position: relative;
+  overflow: visible;
+}
+.button3 {
+  background: var(--color-spring-green-39, #10b981);
+  border-radius: 8px;
+  padding: 9.5px 0px 10.5px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  box-shadow: 0px 0px 15px 0px rgba(16, 185, 129, 0.3);
+}
+._1 {
+  color: var(--color-white-solid, #ffffff);
+  text-align: center;
+  font-family: var(--semantic-button-font-family, "Inter-Medium", sans-serif);
+  font-size: var(--semantic-button-font-size, 14px);
+  line-height: var(--semantic-button-line-height, 20px);
+  font-weight: var(--semantic-button-font-weight, 500);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button4 {
+  background: var(--color-azure-16, #112240);
+  border-radius: 8px;
+  border-style: solid;
+  border-color: var(--color-white-10, rgba(255, 255, 255, 0.1));
+  border-width: 1px;
+  padding: 8.5px 0px 9.5px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+._2 {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: center;
+  font-family: var(--semantic-button-font-family, "Inter-Medium", sans-serif);
+  font-size: var(--semantic-button-font-size, 14px);
+  line-height: var(--semantic-button-line-height, 20px);
+  font-weight: var(--semantic-button-font-weight, 500);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+._3 {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: center;
+  font-family: var(--semantic-button-font-family, "Inter-Medium", sans-serif);
+  font-size: var(--semantic-button-font-size, 14px);
+  line-height: var(--semantic-button-line-height, 20px);
+  font-weight: var(--semantic-button-font-weight, 500);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container31 {
+  padding: 0px 8px 0px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.div {
+  color: var(--color-azure-47, #64748b);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 16px);
+  line-height: var(--inter-regular-line-height, 24px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+._7 {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: center;
+  font-family: var(--semantic-button-font-family, "Inter-Medium", sans-serif);
+  font-size: var(--semantic-button-font-size, 14px);
+  line-height: var(--semantic-button-line-height, 20px);
+  font-weight: var(--semantic-button-font-weight, 500);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button5 {
+  background: var(--color-azure-16, #112240);
+  border-radius: 8px;
+  border-style: solid;
+  border-color: var(--color-white-10, rgba(255, 255, 255, 0.1));
+  border-width: 1px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.img23 {
+  flex-shrink: 0;
+  width: 8.75px;
+  height: 14px;
+  position: relative;
+  overflow: visible;
+}
+.footer-copied-exactly-from-previous-screen {
+  background: var(--color-azure-11, #0a192f);
+  border-style: solid;
+  border-color: var(--color-white-5, rgba(255, 255, 255, 0.05));
+  border-width: 1px 0px 0px 0px;
+  padding: 80px 320px 40px 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.container32 {
+  padding: 0px 24px 0px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--item-spacing-xl, 64px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  flex-shrink: 0;
+  max-width: var(--width-1280, 1280px);
+  position: relative;
+}
+.container33 {
+  align-self: stretch;
+  flex-shrink: 0;
+  display: grid;
+  gap: 48px;
+  position: relative;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: 219px;
+}
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--item-spacing-231, 23.1px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+.overlay-border {
+  background: var(--color-spring-green-39-20, rgba(16, 185, 129, 0.2));
+  border-radius: 8px;
+  border-style: solid;
+  border-color: var(--color-spring-green-39-30, rgba(16, 185, 129, 0.3));
+  border-width: 1px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.img24 {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  overflow: visible;
+}
+.dlh-batu {
+  text-align: left;
+  font-family: var(--inter-bold-font-family, "Inter-Bold", sans-serif);
+  font-size: var(--inter-bold-font-size, 20px);
+  line-height: var(--inter-bold-line-height, 28px);
+  letter-spacing: var(--inter-bold-letter-spacing, -0.5px);
+  font-weight: var(--inter-bold-font-weight, 700);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.dlh-batu-span {
+  color: var(--color-white-solid, #ffffff);
+}
+.dlh-batu-span2 {
+  color: var(--color-spring-green-39, #10b981);
+}
+.container34 {
+  padding: 0px 0px 0.88px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.sistem-informasi-pengelolaan-bank-sampah-dinas-lingkungan-hidup-kota-batu-mewujudkan-kota-yang-bersih-hijau-dan-berkelanjutan {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 22.75px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container35 {
+  padding: 0.9px 0px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: var(--item-spacing-s, 16px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.link2 {
+  background: var(--color-azure-16, #112240);
+  border-radius: 9999px;
+  border-style: solid;
+  border-color: var(--color-white-5, rgba(255, 255, 255, 0.05));
+  border-width: 1px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.img25 {
+  flex-shrink: 0;
+  width: 14px;
+  height: 16px;
+  position: relative;
+  overflow: visible;
+}
+.img26 {
+  flex-shrink: 0;
+  width: 10px;
+  height: 16px;
+  position: relative;
+  overflow: visible;
+}
+.img27 {
+  flex-shrink: 0;
+  width: 18px;
+  height: 16px;
+  position: relative;
+  overflow: visible;
+}
+.quick-links {
+  padding: 0px 0px 31px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--item-spacing-s, 24px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}
+.heading-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.quick-links2 {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(
+    --semantic-heading-4-upper-font-family,
+    "Inter-SemiBold",
+    sans-serif
+  );
+  font-size: var(--semantic-heading-4-upper-font-size, 14px);
+  line-height: var(--semantic-heading-4-upper-line-height, 20px);
+  letter-spacing: var(--semantic-heading-4-upper-letter-spacing, 0.7px);
+  font-weight: var(--semantic-heading-4-upper-font-weight, 600);
+  text-transform: uppercase;
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--item-spacing-s, 16px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.item {
+  padding: 2.5px 0px 1.5px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.link-dashboard-statistics {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.link-waste-bank-directory {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.link-collection-schedule {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.link-education-guidelines {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.services {
+  padding: 0px 0px 31px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--item-spacing-s, 24px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+}
+.services2 {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(
+    --semantic-heading-4-upper-font-family,
+    "Inter-SemiBold",
+    sans-serif
+  );
+  font-size: var(--semantic-heading-4-upper-font-size, 14px);
+  line-height: var(--semantic-heading-4-upper-line-height, 20px);
+  letter-spacing: var(--semantic-heading-4-upper-letter-spacing, 0.7px);
+  font-weight: var(--semantic-heading-4-upper-font-weight, 600);
+  text-transform: uppercase;
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.link-register-waste-bank {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.link-report-issue {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.link-guest-book {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.link-contact-dlh {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.contact {
+  padding: 0px 0px 43px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--item-spacing-s, 24px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 1;
+}
+.contact-us {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(
+    --semantic-heading-4-upper-font-family,
+    "Inter-SemiBold",
+    sans-serif
+  );
+  font-size: var(--semantic-heading-4-upper-font-size, 14px);
+  line-height: var(--semantic-heading-4-upper-line-height, 20px);
+  letter-spacing: var(--semantic-heading-4-upper-letter-spacing, 0.7px);
+  font-weight: var(--semantic-heading-4-upper-font-weight, 600);
+  text-transform: uppercase;
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.item2 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--item-spacing-12, 12px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.margin4 {
+  padding: 4px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.img28 {
+  flex-shrink: 0;
+  width: 10.5px;
+  height: 14px;
+  position: relative;
+  overflow: visible;
+}
+.container36 {
+  padding: 0px 28.89px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.balaikota-among-tani-gedung-b-lantai-2-jl-panglima-sudirman-no-507-pesanggrahan-kota-batu {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.item3 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--item-spacing-12, 12px);
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.img29 {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  position: relative;
+  overflow: visible;
+}
+._0341-596000 {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.img30 {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  position: relative;
+  overflow: visible;
+}
+.dlh-batukota-go-id {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.horizontal-border3 {
+  border-style: solid;
+  border-color: var(--color-white-5, rgba(255, 255, 255, 0.05));
+  border-width: 1px 0px 0px 0px;
+  padding: 32px 0px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+._2023-dinas-lingkungan-hidup-kota-batu-all-rights-reserved {
+  color: var(--color-azure-47, #64748b);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container37 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--item-spacing-2399, 23.99px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.link3 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.privacy-policy {
+  color: var(--color-azure-47, #64748b);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.terms-of-service {
+  color: var(--color-azure-47, #64748b);
+  text-align: left;
+  font-family: var(--inter-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--inter-regular-font-size, 14px);
+  line-height: var(--inter-regular-line-height, 20px);
+  font-weight: var(--inter-regular-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.navigation-copied-exactly-from-previous-screen-updating-active-state {
+  background: var(--color-azure-11-90, rgba(10, 25, 47, 0.9));
+  border-style: solid;
+  border-color: var(--color-white-5, rgba(255, 255, 255, 0.05));
+  border-width: 0px 0px 1px 0px;
+  padding: 0px 344px 0px 344px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 1920px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  backdrop-filter: blur(6px);
+}
+.container38 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 80px;
+  position: relative;
+}
+.container39 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--item-spacing-12, 12px);
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.img31 {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  overflow: visible;
+}
+.dlh-batu-span {
+  color: var(--color-white-solid, #ffffff);
+}
+.dlh-batu-span2 {
+  color: var(--color-spring-green-39, #10b981);
+}
+.link4 {
+  padding: 8px 29.82px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.landing-page {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(
+    --semantic-link-upper-font-family,
+    "Inter-Medium",
+    sans-serif
+  );
+  font-size: var(--semantic-link-upper-font-size, 14px);
+  line-height: var(--semantic-link-upper-line-height, 20px);
+  letter-spacing: var(--semantic-link-upper-letter-spacing, 0.7px);
+  font-weight: var(--semantic-link-upper-font-weight, 500);
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.link-margin {
+  padding: 0px 0px 0px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.link5 {
+  padding: 8px 68.64px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.dashboard-statistics {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(
+    --semantic-link-upper-font-family,
+    "Inter-Medium",
+    sans-serif
+  );
+  font-size: var(--semantic-link-upper-font-size, 14px);
+  line-height: var(--semantic-link-upper-line-height, 20px);
+  letter-spacing: var(--semantic-link-upper-letter-spacing, 0.7px);
+  font-weight: var(--semantic-link-upper-font-weight, 500);
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.link6 {
+  padding: 8px 35.52px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.guest-book {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(
+    --semantic-link-upper-font-family,
+    "Inter-Medium",
+    sans-serif
+  );
+  font-size: var(--semantic-link-upper-font-size, 14px);
+  line-height: var(--semantic-link-upper-line-height, 20px);
+  letter-spacing: var(--semantic-link-upper-letter-spacing, 0.7px);
+  font-weight: var(--semantic-link-upper-font-weight, 500);
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.link7 {
+  padding: 8px 0px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.registration {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(
+    --semantic-link-upper-font-family,
+    "Inter-Medium",
+    sans-serif
+  );
+  font-size: var(--semantic-link-upper-font-size, 14px);
+  line-height: var(--semantic-link-upper-line-height, 20px);
+  letter-spacing: var(--semantic-link-upper-letter-spacing, 0.7px);
+  font-weight: var(--semantic-link-upper-font-weight, 500);
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.link8 {
+  padding: 8px 62.84px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.collection-schedule {
+  color: var(--color-azure-65, #94a3b8);
+  text-align: left;
+  font-family: var(
+    --semantic-link-upper-font-family,
+    "Inter-Medium",
+    sans-serif
+  );
+  font-size: var(--semantic-link-upper-font-size, 14px);
+  line-height: var(--semantic-link-upper-line-height, 20px);
+  letter-spacing: var(--semantic-link-upper-letter-spacing, 0.7px);
+  font-weight: var(--semantic-link-upper-font-weight, 500);
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.link9 {
+  padding: 8px 43.27px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.latest-activities {
+  color: var(--color-spring-green-52, #34d399);
+  text-align: left;
+  font-family: var(
+    --semantic-link-upper-font-family,
+    "Inter-Medium",
+    sans-serif
+  );
+  font-size: var(--semantic-link-upper-font-size, 14px);
+  line-height: var(--semantic-link-upper-line-height, 20px);
+  letter-spacing: var(--semantic-link-upper-letter-spacing, 0.7px);
+  font-weight: var(--semantic-link-upper-font-weight, 500);
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.horizontal-divider {
+  background: var(--color-spring-green-39, #10b981);
+  border-radius: var(--radius-6, 6px) var(--radius-6, 6px) 0px 0px;
+  flex-shrink: 0;
+  height: 2px;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+.container40 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--item-spacing-s, 16px);
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.link10 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.login {
+  color: var(--color-azure-84, #cbd5e1);
+  text-align: left;
+  font-family: var(--semantic-button-font-family, "Inter-Medium", sans-serif);
+  font-size: var(--semantic-button-font-size, 14px);
+  line-height: var(--semantic-button-line-height, 20px);
+  font-weight: var(--semantic-button-font-weight, 500);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.link11 {
+  background: var(--color-spring-green-39, #10b981);
+  border-radius: 6px;
+  padding: 10px 42.42px 10px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0px 0px 15px 0px rgba(16, 185, 129, 0.3);
+}
+.join-waste-bank {
+  color: var(--color-white-solid, #ffffff);
+  text-align: left;
+  font-family: var(--semantic-link-font-family, "Inter-SemiBold", sans-serif);
+  font-size: var(--semantic-link-font-size, 14px);
+  line-height: var(--semantic-link-line-height, 20px);
+  font-weight: var(--semantic-link-font-weight, 600);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}

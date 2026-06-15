@@ -1,0 +1,323 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-navy-900 text-slate-100 font-sans antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-navy-950;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-navy-600 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-navy-500;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-navy-800/60 backdrop-blur-sm border border-navy-600/30 rounded-xl;
+  }
+  .glass-card-hover {
+    @apply glass-card hover:border-emerald-500/30 hover:bg-navy-700/60 transition-all duration-300;
+  }
+  .btn-primary {
+    @apply bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 inline-flex items-center gap-2;
+  }
+  .btn-outline {
+    @apply border border-navy-500 hover:border-emerald-500 text-slate-200 hover:text-emerald-400 font-medium px-6 py-3 rounded-lg transition-all duration-300 inline-flex items-center gap-2;
+  }
+  .input-field {
+    @apply w-full bg-navy-900/80 border border-navy-600/50 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/20 transition-all duration-200;
+  }
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold text-white;
+  }
+  .section-subtitle {
+    @apply text-slate-400 mt-2;
+  }
+  .badge {
+    @apply text-xs font-semibold px-3 py-1 rounded-full;
+  }
+  .badge-emerald {
+    @apply badge bg-emerald-500/20 text-emerald-400;
+  }
+  .badge-blue {
+    @apply badge bg-blue-500/20 text-blue-400;
+  }
+  .badge-amber {
+    @apply badge bg-amber-500/20 text-amber-400;
+  }
+  .badge-red {
+    @apply badge bg-red-500/20 text-red-400;
+  }
+  .badge-purple {
+    @apply badge bg-purple-500/20 text-purple-400;
+  }
+
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-emerald-400 to-emerald-300 bg-clip-text text-transparent;
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+  .animate-slide-down {
+    animation: slideDown 0.3s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   AUDIENCE & ACCESSIBILITY CUSTOM THEMES
+   ========================================================================== */
+
+/* 1. KIDS MODE (Mode Anak-anak) - Playful, warm, soft rounded elements, friendly tones */
+.theme-kids {
+  font-family: 'Fredoka', 'Quicksand', 'Inter', sans-serif !important;
+}
+
+.theme-kids h1, 
+.theme-kids h2, 
+.theme-kids h3, 
+.theme-kids h4, 
+.theme-kids h5, 
+.theme-kids h6,
+.theme-kids .section-title {
+  font-family: 'Fredoka', 'Quicksand', sans-serif !important;
+  color: #fbbf24 !important; /* Playful sunny yellow */
+}
+
+.theme-kids body,
+.theme-kids main {
+  background-color: #072516 !important; /* Soft green background */
+}
+
+.theme-kids .btn-primary {
+  background-color: #f59e0b !important; /* Amber yellow */
+  color: #052e16 !important; /* Dark green text for contrast */
+  font-weight: 700 !important;
+  border-radius: 9999px !important; /* Pill shaped buttons */
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4) !important;
+}
+
+.theme-kids .btn-primary:hover {
+  background-color: #d97706 !important;
+}
+
+.theme-kids .btn-outline {
+  border-color: #fbbf24 !important;
+  color: #fbbf24 !important;
+  font-weight: 700 !important;
+  border-radius: 9999px !important;
+}
+
+.theme-kids .btn-outline:hover {
+  background-color: rgba(251, 191, 36, 0.1) !important;
+}
+
+.theme-kids .glass-card,
+.theme-kids .glass-card-hover {
+  border-radius: 1.5rem !important; /* Extra rounded corners */
+  border-color: rgba(251, 191, 36, 0.25) !important;
+  background-color: rgba(6, 78, 59, 0.4) !important; /* Playful green-tinted card */
+}
+
+.theme-kids .text-gradient {
+  background: linear-gradient(to right, #fbbf24, #f59e0b) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* 2. SENIOR MODE (Mode Lansia) - Ultra-high contrast, large click targets, large bold fonts */
+.theme-senior {
+  font-size: 1.15rem !important; /* Scale base font size */
+}
+
+.theme-senior h1,
+.theme-senior .text-4xl,
+.theme-senior .text-5xl,
+.theme-senior .text-6xl {
+  font-size: 3.5rem !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+}
+
+.theme-senior h2,
+.theme-senior .text-3xl,
+.theme-senior .section-title {
+  font-size: 2.5rem !important;
+  font-weight: 850 !important;
+  color: #fde047 !important; /* Bright yellow for visibility */
+}
+
+.theme-senior h3,
+.theme-senior .text-2xl {
+  font-size: 1.85rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+}
+
+.theme-senior p, 
+.theme-senior span, 
+.theme-senior li, 
+.theme-senior a, 
+.theme-senior button,
+.theme-senior div,
+.theme-senior input,
+.theme-senior select,
+.theme-senior label {
+  font-size: 1.3rem !important; /* Big text */
+  line-height: 1.8 !important;
+  font-weight: 600 !important; /* Bold for accessibility */
+  color: #ffffff !important;
+}
+
+.theme-senior .text-slate-400,
+.theme-senior .text-slate-500,
+.theme-senior .text-gray-400,
+.theme-senior .text-slate-300 {
+  color: #e2e8f0 !important; /* Lighten gray text to high contrast white/slate */
+}
+
+.theme-senior body,
+.theme-senior main {
+  background-color: #000000 !important; /* Pure black for extreme contrast */
+}
+
+.theme-senior .btn-primary {
+  background-color: #fde047 !important; /* Solid bright yellow */
+  color: #000000 !important; /* Pure black text */
+  font-weight: 900 !important;
+  border: 3px solid #ffffff !important;
+  border-radius: 0.5rem !important;
+  padding: 1rem 2rem !important;
+}
+
+.theme-senior .btn-primary:hover {
+  background-color: #eab308 !important;
+}
+
+.theme-senior .btn-outline {
+  border: 3px solid #fde047 !important;
+  color: #fde047 !important;
+  font-weight: 900 !important;
+  background-color: #111827 !important;
+  border-radius: 0.5rem !important;
+  padding: 1rem 2rem !important;
+}
+
+.theme-senior .glass-card,
+.theme-senior .glass-card-hover {
+  border: 3px solid #fde047 !important; /* Thick bright borders */
+  background-color: #111827 !important; /* Solid dark background for card */
+  border-radius: 0.75rem !important;
+}
+
+.theme-senior .badge,
+.theme-senior .badge-emerald {
+  background-color: #166534 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  font-size: 1rem !important;
+  padding: 0.35rem 0.75rem !important;
+}
+
+.theme-senior .text-gradient {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  color: #fde047 !important; /* Plain high visibility yellow */
+}
+
+/* 3. GOVERNMENT/PRO MODE (Mode Dinas) - Structured, elegant serif, gold/blue professional tone */
+.theme-gov {
+  font-family: 'Lora', 'Georgia', serif !important;
+}
+
+.theme-gov h1, 
+.theme-gov h2, 
+.theme-gov h3, 
+.theme-gov h4, 
+.theme-gov h5, 
+.theme-gov h6,
+.theme-gov .section-title,
+.theme-gov .text-gradient {
+  font-family: 'Lora', serif !important;
+  font-weight: 700 !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  color: #e2e8f0 !important;
+}
+
+.theme-gov body,
+.theme-gov main {
+  background-color: #0b1329 !important; /* Formal steel-blue background */
+}
+
+.theme-gov .btn-primary {
+  background-color: #1e3a8a !important; /* Formal dark blue */
+  color: #ffffff !important;
+  border: 1px solid #3b82f6 !important;
+  border-radius: 0.25rem !important; /* Sharp corporate edges */
+  font-family: 'Lora', serif !important;
+}
+
+.theme-gov .btn-primary:hover {
+  background-color: #172554 !important;
+}
+
+.theme-gov .btn-outline {
+  border: 1px solid #475569 !important;
+  color: #94a3b8 !important;
+  border-radius: 0.25rem !important;
+  font-family: 'Lora', serif !important;
+}
+
+.theme-gov .btn-outline:hover {
+  border-color: #3b82f6 !important;
+  color: #3b82f6 !important;
+}
+
+.theme-gov .glass-card,
+.theme-gov .glass-card-hover {
+  border: 1px solid #1e293b !important;
+  background-color: #0f172a !important; /* Solid business gray */
+  border-radius: 0.25rem !important;
+}
+

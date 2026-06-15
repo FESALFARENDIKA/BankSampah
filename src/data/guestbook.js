@@ -1,0 +1,45 @@
+export const guestBookEntries = [
+  {
+    id: 1,
+    name: 'Ahmad Santoso',
+    initials: 'AS',
+    email: 'ahmad.santoso@gmail.com',
+    category: 'Warga Umum',
+    message: 'Sangat menginspirasi program bank sampah ini. Saya baru bergabung bulan lalu dan sudah bisa melihat dampak positif di lingkungan sekitar rumah. Edukasi pemilahan sampahnya sangat jelas.',
+    date: '2 jam yang lalu',
+    color: 'bg-emerald-500',
+    image: null,
+  },
+  {
+    id: 2,
+    name: 'Budi Pratama',
+    initials: 'BP',
+    email: 'budi.pratama@student.id',
+    category: 'Pelajar / Mahasiswa',
+    message: 'Kami dari mahasiswa lingkungan sangat terbantu dengan data statistik yang disediakan di dashboard. Transparansi seperti ini penting untuk riset kami. Terus tingkatkan pelayanannya!',
+    date: 'Kemarin',
+    color: 'bg-blue-500',
+    image: null,
+  },
+  {
+    id: 3,
+    name: 'Dina Wulandari',
+    initials: 'DW',
+    email: 'dina.w@batukota.go.id',
+    category: 'Pegawai Pemerintah',
+    message: 'Apresiasi tinggi untuk DLH Batu atas digitalisasi sistem bank sampah. Ini langkah konkret menuju smart eco-city. Mari bersama-sama kita dukung program ini.',
+    date: '12 Nov 2023',
+    color: 'bg-purple-500',
+    image: null,
+  },
+];
+
+export const visitorCategories = [
+  'Warga Umum',
+  'Pelajar / Mahasiswa',
+  'Pegawai Pemerintah',
+  'Peneliti',
+  'Perwakilan LSM',
+  'Media',
+  'Lainnya',
+];
