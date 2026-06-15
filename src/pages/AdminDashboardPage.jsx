@@ -5,23 +5,29 @@ import {
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 
-// ── Reusable hover dropdown with delay ──────────────────────────────────────
+// ── Click-based action dropdown ──────────────────────────────────────────────
 function HoverActionMenu({ items, label = 'Respon' }) {
   const [open, setOpen] = useState(false);
-  const timerRef = useRef(null);
+  const containerRef = useRef(null);
 
-  const handleEnter = () => {
-    clearTimeout(timerRef.current);
-    setOpen(true);
-  };
-
-  const handleLeave = () => {
-    timerRef.current = setTimeout(() => setOpen(false), 200);
-  };
+  // Close when clicking outside
+  useEffect(() => {
+    if (!open) return;
+    const handleOutside = (e) => {
+      if (containerRef.current && !containerRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleOutside);
+    return () => document.removeEventListener('mousedown', handleOutside);
+  }, [open]);
 
   return (
-    <div className="relative inline-block" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
-      <button className="px-2.5 py-1 bg-navy-800 hover:bg-navy-700 text-slate-300 border border-navy-700 rounded text-[10px] font-bold transition-all flex items-center gap-1 shrink-0">
+    <div ref={containerRef} className="relative inline-block">
+      <button
+        onClick={() => setOpen(prev => !prev)}
+        className="px-2.5 py-1 bg-navy-800 hover:bg-navy-700 text-slate-300 border border-navy-700 rounded text-[10px] font-bold transition-all flex items-center gap-1 shrink-0"
+      >
         <span>{label}</span>
         <ChevronDown className={`w-3 h-3 text-slate-400 transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
