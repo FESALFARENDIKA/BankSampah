@@ -1,9 +1,51 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { 
   Building2, Calendar, AlertTriangle, MessageSquare, BookOpen, 
   Check, X, Plus, Trash2, ShieldAlert, Sparkles, Filter, Clock, MapPin, Eye, Edit3, Upload, Send, ChevronDown, ChevronUp, Users
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
+
+// ── Reusable hover dropdown with delay ──────────────────────────────────────
+function HoverActionMenu({ items, label = 'Respon' }) {
+  const [open, setOpen] = useState(false);
+  const timerRef = useRef(null);
+
+  const handleEnter = () => {
+    clearTimeout(timerRef.current);
+    setOpen(true);
+  };
+
+  const handleLeave = () => {
+    timerRef.current = setTimeout(() => setOpen(false), 200);
+  };
+
+  return (
+    <div className="relative inline-block" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+      <button className="px-2.5 py-1 bg-navy-800 hover:bg-navy-700 text-slate-300 border border-navy-700 rounded text-[10px] font-bold transition-all flex items-center gap-1 shrink-0">
+        <span>{label}</span>
+        <ChevronDown className={`w-3 h-3 text-slate-400 transition-transform ${open ? 'rotate-180' : ''}`} />
+      </button>
+      {open && (
+        <div className="absolute right-0 mt-1 w-36 bg-navy-800 border border-navy-600/50 rounded-lg shadow-2xl py-1 z-50 animate-slide-down">
+          {items.map((item, idx) =>
+            item.divider ? (
+              <div key={idx} className="border-t border-navy-700 my-1" />
+            ) : (
+              <button
+                key={idx}
+                onClick={() => { item.onClick(); setOpen(false); }}
+                className={`w-full text-left px-3 py-1.5 text-[10px] font-bold transition-colors ${item.cls}`}
+              >
+                {item.label}
+              </button>
+            )
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+// ────────────────────────────────────────────────────────────────────────────
 
 export default function AdminDashboardPage() {
   const [activeTab, setActiveTab] = useState('registrasi');
@@ -516,20 +558,16 @@ export default function AdminDashboardPage() {
                           </td>
                           <td className="py-3">
                             <div className="flex items-center justify-center gap-1.5">
-                              {/* Hover dropdown for action */}
-                              <div className="relative group inline-block">
-                                <button className="px-2.5 py-1 bg-navy-800 hover:bg-navy-700 text-slate-300 border border-navy-700 rounded text-[10px] font-bold transition-all flex items-center gap-1 shrink-0">
-                                  <span>Respon</span>
-                                  <ChevronDown className="w-3 h-3 text-slate-400 group-hover:rotate-180 transition-transform" />
-                                </button>
-                                <div className="absolute right-0 mt-1 w-32 bg-navy-800 border border-navy-600/50 rounded-lg shadow-2xl py-1 hidden group-hover:block z-50 animate-slide-down">
-                                  <button onClick={()=>handleAppStatus(app.id,'Approved')} className="w-full text-left px-3 py-1.5 hover:bg-emerald-500/20 text-emerald-400 text-[10px] font-bold transition-colors">Setuju / Selesai</button>
-                                  <button onClick={()=>handleAppStatus(app.id,'Diproses')} className="w-full text-left px-3 py-1.5 hover:bg-blue-500/20 text-blue-400 text-[10px] font-bold transition-colors">Proses</button>
-                                  <button onClick={()=>handleAppStatus(app.id,'Ditolak')} className="w-full text-left px-3 py-1.5 hover:bg-red-500/20 text-red-400 text-[10px] font-bold transition-colors">Tolak</button>
-                                  <div className="border-t border-navy-700 my-1"></div>
-                                  <button onClick={()=>handleAppStatus(app.id,'Pending')} className="w-full text-left px-3 py-1.5 hover:bg-slate-700 text-slate-400 text-[10px] font-bold transition-colors">Reset</button>
-                                </div>
-                              </div>
+                              <HoverActionMenu
+                                label="Respon"
+                                items={[
+                                  { label: 'Setuju / Selesai', cls: 'hover:bg-emerald-500/20 text-emerald-400', onClick: () => handleAppStatus(app.id, 'Approved') },
+                                  { label: 'Proses',           cls: 'hover:bg-blue-500/20 text-blue-400',    onClick: () => handleAppStatus(app.id, 'Diproses') },
+                                  { label: 'Tolak',            cls: 'hover:bg-red-500/20 text-red-400',      onClick: () => handleAppStatus(app.id, 'Ditolak') },
+                                  { divider: true },
+                                  { label: 'Reset',            cls: 'hover:bg-slate-700 text-slate-400',     onClick: () => handleAppStatus(app.id, 'Pending') },
+                                ]}
+                              />
                               <button onClick={()=>handleDeleteApp(app.id)} className="p-1.5 bg-navy-800 hover:bg-navy-700 text-slate-400 hover:text-red-400 rounded transition-colors" title="Hapus">
                                 <Trash2 className="w-3.5 h-3.5" />
                               </button>
@@ -933,20 +971,16 @@ export default function AdminDashboardPage() {
                         </td>
                         <td className="py-4">
                           <div className="flex items-center justify-center gap-1.5">
-                            {/* Hover dropdown for action */}
-                            <div className="relative group inline-block">
-                              <button className="px-2.5 py-1 bg-navy-800 hover:bg-navy-700 text-slate-300 border border-navy-700 rounded text-[10px] font-bold transition-all flex items-center gap-1 shrink-0">
-                                <span>Respon</span>
-                                <ChevronDown className="w-3 h-3 text-slate-400 group-hover:rotate-180 transition-transform" />
-                              </button>
-                              <div className="absolute right-0 mt-1 w-32 bg-navy-800 border border-navy-600/50 rounded-lg shadow-2xl py-1 hidden group-hover:block z-50 animate-slide-down">
-                                <button onClick={() => handleReportStatus(r.id, 'Selesai')} className="w-full text-left px-3 py-1.5 hover:bg-emerald-500/20 text-emerald-400 text-[10px] font-bold transition-colors">Setuju / Selesai</button>
-                                <button onClick={() => handleReportStatus(r.id, 'Diproses')} className="w-full text-left px-3 py-1.5 hover:bg-blue-500/20 text-blue-400 text-[10px] font-bold transition-colors">Proses</button>
-                                <button onClick={() => handleReportStatus(r.id, 'Ditolak')} className="w-full text-left px-3 py-1.5 hover:bg-red-500/20 text-red-400 text-[10px] font-bold transition-colors">Tolak</button>
-                                <div className="border-t border-navy-700 my-1"></div>
-                                <button onClick={() => handleReportStatus(r.id, 'Baru')} className="w-full text-left px-3 py-1.5 hover:bg-slate-700 text-slate-400 text-[10px] font-bold transition-colors">Reset</button>
-                              </div>
-                            </div>
+                            <HoverActionMenu
+                              label="Respon"
+                              items={[
+                                { label: 'Setuju / Selesai', cls: 'hover:bg-emerald-500/20 text-emerald-400', onClick: () => handleReportStatus(r.id, 'Selesai') },
+                                { label: 'Proses',           cls: 'hover:bg-blue-500/20 text-blue-400',    onClick: () => handleReportStatus(r.id, 'Diproses') },
+                                { label: 'Tolak',            cls: 'hover:bg-red-500/20 text-red-400',      onClick: () => handleReportStatus(r.id, 'Ditolak') },
+                                { divider: true },
+                                { label: 'Reset',            cls: 'hover:bg-slate-700 text-slate-400',     onClick: () => handleReportStatus(r.id, 'Baru') },
+                              ]}
+                            />
                             <button onClick={() => handleDeleteReport(r.id)} className="p-1.5 bg-navy-800 hover:bg-navy-700 text-slate-400 hover:text-red-400 rounded transition-colors" title="Hapus">
                               <Trash2 className="w-3.5 h-3.5" />
                             </button>
