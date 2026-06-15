@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2, Building2, Truck, Users, AlertTriangle, PhoneCall, Sparkles, HelpCircle, ArrowLeft, Send } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Building2, Truck, Users, AlertTriangle, PhoneCall, Sparkles, HelpCircle, ArrowLeft, Send, ShieldAlert, LogIn } from 'lucide-react';
 import { publicServices, serviceFlow } from '../data/services';
 import ExpandableInfo from '../components/ExpandableInfo';
 import Toast from '../components/Toast';
@@ -10,6 +10,15 @@ export default function LayananPublikPage() {
   const [activeForm, setActiveForm] = useState(null); // 'pendaftaran' | 'edukasi' | null
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
+  const [currentUser, setCurrentUser] = useState(null);
+
+  // Load user session
+  useEffect(() => {
+    const user = localStorage.getItem('wastebank-user');
+    if (user) {
+      setCurrentUser(JSON.parse(user));
+    }
+  }, []);
 
   // 1. Form State: Pendaftaran Bank Sampah
   const [regForm, setRegForm] = useState({
@@ -289,6 +298,33 @@ export default function LayananPublikPage() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        ) : !currentUser ? (
+          
+          /* LOCK PANEL: BUTUH LOGIN */
+          <div className="glass-card p-8 max-w-md mx-auto text-center animate-slide-up my-12 border border-red-500/20">
+            <div className="w-16 h-16 bg-red-500/10 border border-red-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <ShieldAlert className="w-8 h-8 text-red-400" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Silakan Login Terlebih Dahulu</h3>
+            <p className="text-sm text-slate-400 leading-relaxed mb-6">
+              Anda harus masuk ke akun pengguna terlebih dahulu untuk mengakses dan mengisi formulir layanan publik DLH Kota Batu.
+            </p>
+            <div className="flex flex-col gap-3">
+              <Link 
+                to="/login"
+                className="btn-primary w-full justify-center py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-1.5"
+              >
+                <LogIn className="w-4 h-4" />
+                <span>Login / Register Akun</span>
+              </Link>
+              <button
+                onClick={() => setActiveForm(null)}
+                className="btn-outline w-full justify-center py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider"
+              >
+                Kembali ke Layanan
+              </button>
             </div>
           </div>
         ) : activeForm === 'pendaftaran' ? (
