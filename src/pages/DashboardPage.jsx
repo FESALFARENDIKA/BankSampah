@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { TrendingUp, TrendingDown, Recycle, Trash2, Zap, Building2, MapPin } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 import { statsData, monthlyTrends, wasteCategories, wasteBankLocations } from '../data/statistics';
@@ -33,6 +34,33 @@ const CustomTooltip = ({ active, payload, label }) => {
 };
 
 export default function DashboardPage() {
+  const [wasteTypeTotals, setWasteTypeTotals] = useState([]);
+
+  useEffect(() => {
+    try {
+      const saved = JSON.parse(localStorage.getItem('bank_sampah_breakdowns') || '{}');
+      const totals = { plastic:0, paper:0, iron:0, bottle:0, glass:0, oil:0 };
+      Object.values(saved).forEach(b => {
+        totals.plastic += parseFloat(b.plastic || 0);
+        totals.paper += parseFloat(b.paper || 0);
+        totals.iron += parseFloat(b.iron || 0);
+        totals.bottle += parseFloat(b.bottle || 0);
+        totals.glass += parseFloat(b.glass || 0);
+        totals.oil += parseFloat(b.oil || 0);
+      });
+      const arr = [
+        { name: 'Plastik', value: totals.plastic, color: '#10b981' },
+        { name: 'Kertas', value: totals.paper, color: '#3b82f6' },
+        { name: 'Logam', value: totals.iron, color: '#f97316' },
+        { name: 'Botol', value: totals.bottle, color: '#a3e635' },
+        { name: 'Beling', value: totals.glass, color: '#60a5fa' },
+        { name: 'Minyak', value: totals.oil, color: '#f59e0b' },
+      ];
+      setWasteTypeTotals(arr);
+    } catch (err) {
+      console.error(err);
+    }
+  }, []);
   return (
     <div className="animate-fade-in">
       {/* Header */}
@@ -182,6 +210,28 @@ export default function DashboardPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+        {/* Aggregated types pie chart */}
+        <div className="glass-card p-6 mt-6">
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <h3 className="text-lg font-semibold text-white">Total Jenis Sampah Terdaftar</h3>
+              <p className="text-sm text-slate-400">Ringkasan akumulasi jenis sampah dari data bank sampah</p>
+            </div>
+          </div>
+          <div className="h-64">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie data={wasteTypeTotals} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80} innerRadius={40}>
+                  {wasteTypeTotals.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={entry.color} />
+                  ))}
+                </Pie>
+                <Legend formatter={(value) => <span className="text-xs text-slate-300">{value}</span>} />
+                <Tooltip />
+              </PieChart>
+            </ResponsiveContainer>
           </div>
         </div>
       </div>

@@ -1,11 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Leaf, ChevronDown, Compass, Award, Building, BookOpen, Calendar, HelpCircle, BarChart2, ShieldAlert, LogOut, LogIn, User } from 'lucide-react';
+import Toast from './Toast';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null); // 'profil', 'layanan', 'edukasi'
   const [currentUser, setCurrentUser] = useState(null);
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
@@ -76,6 +79,8 @@ export default function Navbar() {
     localStorage.removeItem('wastebank-user');
     setCurrentUser(null);
     window.dispatchEvent(new Event('authChange'));
+    setToastMessage('Anda telah berhasil keluar (logout) dari sistem.');
+    setShowToast(true);
     navigate('/');
   };
 
@@ -119,16 +124,14 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-navy-600/30">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-emerald-50/95 backdrop-blur-md border-b border-emerald-700/10 text-black">
       <div className="page-container">
         <div className="flex items-center justify-between h-16" ref={dropdownRef}>
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group shrink-0">
-            <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Leaf className="w-5 h-5 text-white" />
-            </div>
+          <Link to="/" className="flex items-center gap-3 group shrink-0">
+            <img src="/external/logo_kota_batu.png" alt="DLH Kota Batu" className="w-8 h-8 object-contain rounded" />
             <span className="text-lg font-bold text-white">
-              DLH<span className="text-emerald-400">Batu</span>
+              DLH <span className="text-black font-semibold">Kota Batu</span>
             </span>
           </Link>
 
@@ -142,28 +145,47 @@ export default function Navbar() {
             >
               <button
                 onClick={() => toggleDropdown('profil')}
-                className={`px-3 py-2 text-sm font-semibold rounded-md transition-all duration-200 flex items-center gap-1 ${activeDropdown === 'profil' || location.pathname === '/profil-dlh' || location.pathname === '/guest-book' || location.pathname === '/admin-dashboard'
-                    ? 'text-emerald-400 bg-navy-800'
-                    : 'text-slate-300 hover:text-emerald-300 hover:bg-navy-800/50'
-                  }`}
+              className={`px-3 py-2 text-sm font-semibold rounded-md transition-all duration-200 flex items-center gap-1 ${
+                activeDropdown === 'profil' ||
+                ['/profil-dlh', '/guest-book', '/admin-dashboard'].includes(location.pathname)
+                  ? 'text-emerald-800 bg-white/60 hover:bg-white/60'
+                  : 'text-white hover:text-emerald-100 hover:bg-white/50'
+              }`}
               >
                 PROFIL <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'profil' ? 'rotate-180' : ''}`} />
               </button>
               {activeDropdown === 'profil' && (
-                <div className="absolute left-0 mt-2 w-80 bg-navy-800 border border-navy-600/50 rounded-xl shadow-2xl p-2 animate-slide-down">
+                <div className="absolute left-0 mt-2 w-80 bg-white/95 border border-emerald-700/20 rounded-xl shadow-2xl p-2 animate-slide-down">
                   {getProfilItems().map((item) => (
                     <Link
                       key={item.path}
                       to={item.path}
                       onClick={() => setActiveDropdown(null)}
-                      className={`block p-3 rounded-lg hover:bg-navy-700/60 transition-colors ${location.pathname === item.path ? 'bg-navy-700/40 text-emerald-400 font-semibold' : 'text-white'
-                        }`}
+                      className={`block p-3 rounded-lg hover:bg-emerald-100/70 transition-colors ${
+                        location.pathname === item.path
+                          ? 'bg-white text-slate-900 font-semibold'
+                          : 'text-slate-900 hover:text-slate-900'
+                      }`}
                     >
                       <div className="flex items-center gap-1.5 font-semibold text-sm">
-                        {item.path === '/admin-dashboard' && <ShieldAlert className="w-3.5 h-3.5 text-red-400 shrink-0" />}
-                        <span className={item.path === '/admin-dashboard' ? 'text-red-400' : ''}>{item.label}</span>
+                        {item.path === '/admin-dashboard' && (
+                          <ShieldAlert className="w-3.5 h-3.5 text-red-500 shrink-0" />
+                        )}
+                        <span
+                          className={
+                            item.path === '/admin-dashboard'
+                              ? 'text-red-500'
+                              : location.pathname === item.path
+                                ? 'text-emerald-800'
+                                : 'text-slate-900'
+                          }
+                        >
+                          {item.label}
+                        </span>
                       </div>
-                      <div className="text-xs text-slate-400 mt-0.5 leading-relaxed">{item.desc}</div>
+                      <div className="text-xs text-slate-800 mt-0.5 leading-relaxed opacity-95">
+                        {item.desc}
+                      </div>
                     </Link>
                   ))}
                 </div>
@@ -179,25 +201,28 @@ export default function Navbar() {
               <button
                 onClick={() => toggleDropdown('layanan')}
                 className={`px-3 py-2 text-sm font-semibold rounded-md transition-all duration-200 flex items-center gap-1 ${activeDropdown === 'layanan' || ['/layanan-publik', '/directory', '/schedule'].includes(location.pathname)
-                    ? 'text-emerald-400 bg-navy-800'
-                    : 'text-slate-300 hover:text-emerald-300 hover:bg-navy-800/50'
+                    ? 'text-emerald-800 bg-white/60 hover:bg-white/60'
+                    : 'text-white hover:text-emerald-100 hover:bg-white/50'
                   }`}
               >
                 LAYANAN <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'layanan' ? 'rotate-180' : ''}`} />
               </button>
               {activeDropdown === 'layanan' && (
-                <div className="absolute left-0 mt-2 w-96 bg-navy-800 border border-navy-600/50 rounded-xl shadow-2xl p-2 animate-slide-down">
+                <div className="absolute left-0 mt-2 w-96 bg-white/95 border border-emerald-700/20 rounded-xl shadow-2xl p-2 animate-slide-down">
                   <div className="grid grid-cols-1 gap-1">
                     {menuGroups.layanan.items.map((item) => (
                       <Link
                         key={item.path}
                         to={item.path}
                         onClick={() => setActiveDropdown(null)}
-                        className={`block p-3 rounded-lg hover:bg-navy-700/60 transition-colors ${location.pathname === item.path ? 'bg-navy-700/40 text-emerald-400' : 'text-white'
-                          }`}
+                        className={`block p-3 rounded-lg hover:bg-white/80 transition-colors ${
+                          location.pathname === item.path
+                            ? 'bg-white text-slate-900 font-semibold'
+                            : 'text-slate-900 hover:text-slate-900'
+                        }`}
                       >
                         <div className="font-semibold text-sm">{item.label}</div>
-                        <div className="text-xs text-slate-400 mt-0.5 leading-relaxed">{item.desc}</div>
+                        <div className="text-xs text-slate-800 mt-0.5 leading-relaxed opacity-95">{item.desc}</div>
                       </Link>
                     ))}
                   </div>
@@ -214,26 +239,29 @@ export default function Navbar() {
               <button
                 onClick={() => toggleDropdown('edukasi')}
                 className={`px-3 py-2 text-sm font-semibold rounded-md transition-all duration-200 flex items-center gap-1 ${activeDropdown === 'edukasi' || ['/dashboard-statistics', '/galeri-kegiatan', '/education-guidelines'].includes(location.pathname)
-                    ? 'text-emerald-400 bg-navy-800'
-                    : 'text-slate-300 hover:text-emerald-300 hover:bg-navy-800/50'
+                    ? 'text-emerald-800 bg-white/60 hover:bg-white/60'
+                    : 'text-white hover:text-emerald-100 hover:bg-white/50'
                   }`}
               >
                 DATA & EDUKASI <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'edukasi' ? 'rotate-180' : ''}`} />
               </button>
               {activeDropdown === 'edukasi' && (
-                <div className="absolute right-0 lg:left-0 mt-2 w-96 bg-navy-800 border border-navy-600/50 rounded-xl shadow-2xl p-2 animate-slide-down">
-                  {menuGroups.edukasi.items.map((item) => (
-                    <Link
-                      key={item.path}
-                      to={item.path}
-                      onClick={() => setActiveDropdown(null)}
-                      className={`block p-3 rounded-lg hover:bg-navy-700/60 transition-colors ${location.pathname === item.path ? 'bg-navy-700/40 text-emerald-400' : 'text-white'
+                <div className="absolute right-0 lg:left-0 mt-2 w-96 bg-white/95 border border-emerald-700/20 rounded-xl shadow-2xl p-2 animate-slide-down">
+                    {menuGroups.edukasi.items.map((item) => (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        onClick={() => setActiveDropdown(null)}
+                        className={`block p-3 rounded-lg hover:bg-white/80 transition-colors ${
+                          location.pathname === item.path
+                            ? 'bg-white text-slate-900 font-semibold'
+                            : 'text-slate-900 hover:text-slate-900'
                         }`}
-                    >
-                      <div className="font-semibold text-sm">{item.label}</div>
-                      <div className="text-xs text-slate-400 mt-0.5 leading-relaxed">{item.desc}</div>
-                    </Link>
-                  ))}
+                      >
+                        <div className="font-semibold text-sm">{item.label}</div>
+                        <div className="text-xs text-slate-800 mt-0.5 leading-relaxed opacity-95">{item.desc}</div>
+                      </Link>
+                    ))}
                 </div>
               )}
             </div>
@@ -243,14 +271,14 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             {currentUser ? (
               <div className="flex items-center gap-3">
-                <div className="flex items-center gap-1.5 bg-navy-800/60 border border-navy-700/50 rounded-full px-3 py-1.5 text-xs text-slate-300 font-semibold">
-                  <User className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Halo, {currentUser.fullName.split(' ')[0]}!</span>
-                  {currentUser.role === 'admin' && <span className="text-[9px] bg-red-500/20 text-red-400 px-1 py-0.5 rounded ml-1 font-bold">Admin</span>}
+                <div className="flex items-center gap-1.5 text-xs text-white font-semibold">
+                  <User className="w-3.5 h-3.5 text-white" />
+                  <span>Halo, {currentUser.role === 'admin' ? 'Administrator' : 'Warga'}!</span>
+                  {/* Hapus badge "Admin" karena sudah ada label "Halo, Administrator!" */}
                 </div>
                 <button
                   onClick={handleLogout}
-                  className="btn-outline text-xs !px-3 !py-2 shrink-0 border-red-500/30 text-red-400 hover:bg-red-500/10 flex items-center gap-1"
+                  className="btn-outline text-xs !px-3 !py-2 shrink-0 border-red-500/30 text-red-600 hover:bg-red-500/10 flex items-center gap-1"
                 >
                   <LogOut className="w-3.5 h-3.5" />
                   <span>Logout</span>
@@ -271,12 +299,12 @@ export default function Navbar() {
           <div className="flex items-center gap-2 lg:hidden">
             {currentUser && (
               <span className="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded-full font-bold">
-                {currentUser.fullName.split(' ')[0]}
+                {String(currentUser.full_name || currentUser.fullName || 'Warga').split(' ')[0]}
               </span>
             )}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-slate-300 hover:text-white"
+              className="p-2 text-slate-800 hover:text-emerald-900"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -382,6 +410,7 @@ export default function Navbar() {
           </div>
         )}
       </div>
+      <Toast message={toastMessage} isVisible={showToast} onClose={() => setShowToast(false)} />
     </nav>
   );
 }

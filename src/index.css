@@ -10,44 +10,163 @@
   }
 
   body {
-    @apply bg-navy-900 text-slate-100 font-sans antialiased;
+    background-color: #e6f7ec !important;
+    color: #102a18 !important;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
 
   ::-webkit-scrollbar {
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    @apply bg-navy-950;
+    background: #012217 !important;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-navy-600 rounded-full;
+    background: #047857 !important;
+    border-radius: 9999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-navy-500;
+    background: #059669 !important;
   }
 }
 
 @layer components {
+  /* ==========================================================================
+     FOOTER CONTRAST (force readability)
+     ========================================================================== */
+  footer,
+  footer * {
+    color: #ffffff !important;
+    opacity: 1 !important;
+  }
+
+  footer h3,
+  footer p,
+  footer span,
+  footer li,
+  footer div {
+    color: #ffffff !important;
+  }
+
+  footer a {
+    color: #ffffff !important;
+  }
+  footer a:hover {
+    color: #34d399 !important; /* emerald-400/300-like */
+  }
+
+  /* Bottom bar links + copyright */
+  footer .text-slate-500,
+  footer .text-slate-600,
+  footer .text-slate-400,
+  footer .text-slate-300,
+  footer .text-slate-200,
+  footer .text-slate-100,
+  footer .text-slate-50 {
+    color: #ffffff !important;
+  }
+
+  footer svg {
+    color: #10b981 !important; /* Emerald color for icons */
+    fill: #10b981 !important;
+  }
+
+  /* Footer icon colors - keep emerald green */
+  footer a svg,
+  footer .text-emerald-300 {
+    color: #10b981 !important;
+  }
+
+  footer a:hover svg {
+    color: #ffffff !important;
+  }
+
+  /* Neutralize specific slate text classes inside footer */
+  footer .text-slate-400,
+  footer .text-slate-500,
+  footer .text-slate-600,
+  footer .text-slate-700,
+  footer .text-slate-100,
+  footer .text-slate-200 {
+    color: #ffffff !important;
+  }
+
   .glass-card {
-    @apply bg-navy-800/60 backdrop-blur-sm border border-navy-600/30 rounded-xl;
+    background-color: #ffffff !important;
+    backdrop-filter: none !important;
+    border: 1px solid rgba(16, 185, 129, 0.12) !important;
+    border-radius: 0.75rem;
   }
   .glass-card-hover {
-    @apply glass-card hover:border-emerald-500/30 hover:bg-navy-700/60 transition-all duration-300;
+    @apply glass-card;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .glass-card-hover:hover {
+    background-color: rgba(4, 62, 46, 0.88) !important;
+    border-color: rgba(16, 185, 129, 0.4) !important;
+    color: #f8fafc !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -10px rgba(16, 185, 129, 0.3);
+  }
+  .glass-card-hover:hover * {
+    color: inherit !important;
   }
   .btn-primary {
-    @apply bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 inline-flex items-center gap-2;
+    background-color: #05a86b !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .btn-primary:hover {
+    background-color: #048f56 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
   }
   .btn-outline {
-    @apply border border-navy-500 hover:border-emerald-500 text-slate-200 hover:text-emerald-400 font-medium px-6 py-3 rounded-lg transition-all duration-300 inline-flex items-center gap-2;
+    border: 1px solid rgba(6, 78, 59, 0.08) !important;
+    background-color: rgba(255,255,255,0.9) !important;
+    color: #064e3b !important;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .btn-outline:hover {
+    border-color: #05a86b !important;
+    background-color: rgba(5,168,107,0.06) !important;
+    color: #048f56 !important;
   }
   .input-field {
-    @apply w-full bg-navy-900/80 border border-navy-600/50 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/20 transition-all duration-200;
+    width: 100%;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(6,78,59,0.08) !important;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: #064e3b !important;
+    transition: all 0.2s ease;
+  }
+  .input-field:focus {
+    outline: none;
+    border-color: #05a86b !important;
+    box-shadow: 0 0 0 3px rgba(5,168,107,0.08) !important;
+  }
+  .input-field::placeholder {
+    color: #94a3b8 !important;
   }
   .section-title {
-    @apply text-2xl md:text-3xl font-bold text-white;
+    @apply text-2xl md:text-3xl font-bold text-slate-900;
   }
   .section-subtitle {
-    @apply text-slate-400 mt-2;
+    @apply text-slate-700 mt-2;
   }
   .badge {
     @apply text-xs font-semibold px-3 py-1 rounded-full;
@@ -64,9 +183,6 @@
   .badge-red {
     @apply badge bg-red-500/20 text-red-400;
   }
-  .badge-purple {
-    @apply badge bg-purple-500/20 text-purple-400;
-  }
 
   .page-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
@@ -75,7 +191,10 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-emerald-400 to-emerald-300 bg-clip-text text-transparent;
+    background: linear-gradient(to right, #34d399, #059669) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
   }
   .animate-fade-in {
     animation: fadeIn 0.5s ease-out;
@@ -92,232 +211,275 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
+  from { opacity: 0; transform: translateY(-8px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 /* ==========================================================================
-   AUDIENCE & ACCESSIBILITY CUSTOM THEMES
+   NAVBAR - Very dark premium green
    ========================================================================== */
-
-/* 1. KIDS MODE (Mode Anak-anak) - Playful, warm, soft rounded elements, friendly tones */
-.theme-kids {
-  font-family: 'Fredoka', 'Quicksand', 'Inter', sans-serif !important;
+nav.fixed {
+  background: rgba(5,168,107,0.98) !important; /* Navbar bright green */
+  backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(4, 78, 59, 0.08) !important;
+  box-shadow: 0 2px 12px rgba(5,168,107,0.08) !important;
 }
 
-.theme-kids h1, 
-.theme-kids h2, 
-.theme-kids h3, 
-.theme-kids h4, 
-.theme-kids h5, 
-.theme-kids h6,
-.theme-kids .section-title {
-  font-family: 'Fredoka', 'Quicksand', sans-serif !important;
-  color: #fbbf24 !important; /* Playful sunny yellow */
+/* Submenu dropdown text - make description text white/light but slightly soft */
+nav.fixed .text-slate-400 {
+  color: rgba(255, 255, 255, 0.92) !important;
 }
-
-.theme-kids body,
-.theme-kids main {
-  background-color: #072516 !important; /* Soft green background */
+nav.fixed .text-slate-300 {
+  color: rgba(255, 255, 255, 0.98) !important;
 }
-
-.theme-kids .btn-primary {
-  background-color: #f59e0b !important; /* Amber yellow */
-  color: #052e16 !important; /* Dark green text for contrast */
-  font-weight: 700 !important;
-  border-radius: 9999px !important; /* Pill shaped buttons */
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4) !important;
-}
-
-.theme-kids .btn-primary:hover {
-  background-color: #d97706 !important;
-}
-
-.theme-kids .btn-outline {
-  border-color: #fbbf24 !important;
-  color: #fbbf24 !important;
-  font-weight: 700 !important;
-  border-radius: 9999px !important;
-}
-
-.theme-kids .btn-outline:hover {
-  background-color: rgba(251, 191, 36, 0.1) !important;
-}
-
-.theme-kids .glass-card,
-.theme-kids .glass-card-hover {
-  border-radius: 1.5rem !important; /* Extra rounded corners */
-  border-color: rgba(251, 191, 36, 0.25) !important;
-  background-color: rgba(6, 78, 59, 0.4) !important; /* Playful green-tinted card */
-}
-
-.theme-kids .text-gradient {
-  background: linear-gradient(to right, #fbbf24, #f59e0b) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  color: transparent !important;
-}
-
-/* 2. SENIOR MODE (Mode Lansia) - Ultra-high contrast, large click targets, large bold fonts */
-.theme-senior {
-  font-size: 1.15rem !important; /* Scale base font size */
-}
-
-.theme-senior h1,
-.theme-senior .text-4xl,
-.theme-senior .text-5xl,
-.theme-senior .text-6xl {
-  font-size: 3.5rem !important;
-  font-weight: 900 !important;
+nav.fixed .text-white {
   color: #ffffff !important;
 }
 
-.theme-senior h2,
-.theme-senior .text-3xl,
-.theme-senior .section-title {
-  font-size: 2.5rem !important;
-  font-weight: 850 !important;
-  color: #fde047 !important; /* Bright yellow for visibility */
+/* Dropdown card container */
+nav.fixed .bg-navy-800 {
+  background-color: #012e1f !important;
+  border-color: rgba(16, 185, 129, 0.25) !important;
+}
+nav.fixed .hover\:bg-navy-700\/60:hover {
+  background-color: rgba(4, 62, 46, 0.6) !important;
 }
 
-.theme-senior h3,
-.theme-senior .text-2xl {
-  font-size: 1.85rem !important;
-  font-weight: 800 !important;
+/* ==========================================================================
+   FOOTER - Darker emerald green
+   ========================================================================== */
+footer {
+  background-color: #065f46 !important; /* Footer emerald green */
+  border-top: 1px solid rgba(4, 78, 59, 0.15) !important;
+  color: #ffffff !important;
+}
+footer * {
+  color: #ffffff !important;
+}
+footer a {
+  color: #ffffff !important;
+}
+footer a svg {
+  color: #10b981 !important;
+}
+footer .text-emerald-300 {
+  color: #10b981 !important;
+}
+footer .bg-navy-950 {
+  background-color: #065f46 !important;
+}
+footer .bg-navy-800 {
+  background-color: #0b6b4f !important;
+}
+footer .bg-emerald-900 {
+  background-color: #065f46 !important;
+}
+
+/* ==========================================================================
+   LEAFLET MAP & TOOLTIPS
+   ========================================================================== */
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background-color: #ffffff !important;
+  color: #064e3b !important;
+  border: 1px solid rgba(6,78,59,0.08) !important;
+  box-shadow: 0 6px 18px rgba(6,78,59,0.06) !important;
+}
+.leaflet-popup-content-wrapper * {
+  color: #064e3b !important;
+}
+.bank-label-tooltip {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(6,78,59,0.08) !important;
+  color: #064e3b !important;
+  font-weight: bold !important;
+  font-size: 10px !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4) !important;
+}
+
+/* ==========================================================================
+   SPECIFIC OVERRIDES FOR DIALOGS, MODALS, WHITE BG CONTAINERS
+   Make sure cards and inputs are extremely clear
+   ========================================================================== */
+.bg-white {
+  background-color: #ffffff !important;
+}
+.text-slate-900, .text-slate-800, .text-slate-700, .text-slate-600 {
+  color: #064e3b !important; /* Dark green text for readability */
+}
+.text-slate-500, .text-slate-400 {
+  color: #475569 !important; /* Muted slate for secondary text */
+}
+.bg-slate-100, .bg-slate-50 {
+  background-color: #f8faf5 !important;
+}
+.border-slate-200, .border-slate-100 {
+  border-color: rgba(6,78,59,0.06) !important;
+}
+
+/* Map Notification Toast */
+.animate-shake-in {
+  animation: shakeIn 0.4s ease-out;
+}
+@keyframes shakeIn {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* AUDIENCE THEMES */
+.theme-kids body, .theme-kids main { background-color: #072516 !important; }
+.theme-senior body, .theme-senior main { background-color: #000000 !important; }
+.theme-gov body, .theme-gov main { background-color: #0b1329 !important; }
+
+/* ==========================================================================
+   GLOBAL: all white/gray text -> dark (hitam gelap),
+   emerald/green highlight tetap hijau.
+   Ini untuk memastikan font di seluruh menu user/admin tetap terbaca.
+   ========================================================================== */
+:root{
+  --bb-dark-text: #071a12;
+  --bb-green-highlight: #059669;
+}
+
+/* Green highlights tetap hijau */
+.text-emerald-50,
+.text-emerald-100,
+.text-emerald-200,
+.text-emerald-300,
+.text-emerald-400,
+.text-emerald-500,
+.text-emerald-600,
+.text-emerald-700,
+.text-emerald-800,
+.text-emerald-900,
+.text-green-200,
+.text-green-400,
+.text-green-500{
+  color: var(--bb-green-highlight) !important;
+}
+
+/* Putih & gray -> hitam gelap */
+/* NOTE: jangan override teks di FOOTER (footer punya kontras sendiri).
+   Tanpa pengecualian ini, teks-footer tetap dipaksa jadi hitam gelap. */
+:not(footer *) .text-white,
+:not(footer *) .text-slate-50,
+:not(footer *) .text-slate-100,
+:not(footer *) .text-slate-200,
+:not(footer *) .text-slate-300,
+:not(footer *) .text-slate-400,
+:not(footer *) .text-slate-500,
+:not(footer *) .text-slate-600,
+:not(footer *) .text-slate-700,
+:not(footer *) .text-slate-800,
+:not(footer *) .text-slate-900,
+:not(footer *) .text-gray-50,
+:not(footer *) .text-gray-100,
+:not(footer *) .text-gray-200,
+:not(footer *) .text-gray-300,
+:not(footer *) .text-gray-400,
+:not(footer *) .text-gray-500,
+:not(footer *) .text-gray-600,
+:not(footer *) .text-gray-700,
+:not(footer *) .text-gray-800,
+:not(footer *) .text-gray-900,
+:not(footer *) .text-zinc-50,
+:not(footer *) .text-zinc-100,
+:not(footer *) .text-zinc-200,
+:not(footer *) .text-zinc-300,
+:not(footer *) .text-zinc-400,
+:not(footer *) .text-zinc-500,
+:not(footer *) .text-zinc-600,
+:not(footer *) .text-zinc-700,
+:not(footer *) .text-zinc-800,
+:not(footer *) .text-zinc-900,
+:not(footer *) .text-neutral-50,
+:not(footer *) .text-neutral-100,
+:not(footer *) .text-neutral-200,
+:not(footer *) .text-neutral-300,
+:not(footer *) .text-neutral-400,
+:not(footer *) .text-neutral-500,
+:not(footer *) .text-neutral-600,
+:not(footer *) .text-neutral-700,
+:not(footer *) .text-neutral-800,
+:not(footer *) .text-neutral-900{
+  color: var(--bb-dark-text) !important;
+}
+
+/* Beberapa komponen pakai opacity + slate */
+.opacity-95.text-slate-100,
+.opacity-95.text-slate-200,
+.opacity-95.text-slate-300,
+.opacity-95.text-slate-400,
+.opacity-80.text-slate-100,
+.opacity-80.text-slate-400{
+  color: var(--bb-dark-text) !important;
+}
+
+/* Footer/navbar link ikuti warna elemen sekitarnya */
+nav a, footer a{
+  color: inherit !important;
+}
+
+/* ==========================================================================
+   FOOTER TEXT COLORS - FORCE ALL TEXT TO WHITE
+   Override global rules to ensure footer text is always white
+   ========================================================================== */
+footer h2,
+footer h3,
+footer h4,
+footer p,
+footer span,
+footer li,
+footer div {
   color: #ffffff !important;
 }
 
-.theme-senior p, 
-.theme-senior span, 
-.theme-senior li, 
-.theme-senior a, 
-.theme-senior button,
-.theme-senior div,
-.theme-senior input,
-.theme-senior select,
-.theme-senior label {
-  font-size: 1.3rem !important; /* Big text */
-  line-height: 1.8 !important;
-  font-weight: 600 !important; /* Bold for accessibility */
+/* All text color classes in footer stay white */
+footer .text-white,
+footer .text-slate-50,
+footer .text-slate-100,
+footer .text-slate-200,
+footer .text-slate-300,
+footer .text-slate-400,
+footer .text-slate-500,
+footer .text-slate-600,
+footer .text-slate-700,
+footer .text-slate-800,
+footer .text-slate-900,
+footer .text-gray-50,
+footer .text-gray-100,
+footer .text-gray-200,
+footer .text-gray-300,
+footer .text-gray-400,
+footer .text-gray-500,
+footer .text-gray-600,
+footer .text-gray-700,
+footer .text-gray-800,
+footer .text-gray-900 {
   color: #ffffff !important;
 }
 
-.theme-senior .text-slate-400,
-.theme-senior .text-slate-500,
-.theme-senior .text-gray-400,
-.theme-senior .text-slate-300 {
-  color: #e2e8f0 !important; /* Lighten gray text to high contrast white/slate */
-}
-
-.theme-senior body,
-.theme-senior main {
-  background-color: #000000 !important; /* Pure black for extreme contrast */
-}
-
-.theme-senior .btn-primary {
-  background-color: #fde047 !important; /* Solid bright yellow */
-  color: #000000 !important; /* Pure black text */
-  font-weight: 900 !important;
-  border: 3px solid #ffffff !important;
-  border-radius: 0.5rem !important;
-  padding: 1rem 2rem !important;
-}
-
-.theme-senior .btn-primary:hover {
-  background-color: #eab308 !important;
-}
-
-.theme-senior .btn-outline {
-  border: 3px solid #fde047 !important;
-  color: #fde047 !important;
-  font-weight: 900 !important;
-  background-color: #111827 !important;
-  border-radius: 0.5rem !important;
-  padding: 1rem 2rem !important;
-}
-
-.theme-senior .glass-card,
-.theme-senior .glass-card-hover {
-  border: 3px solid #fde047 !important; /* Thick bright borders */
-  background-color: #111827 !important; /* Solid dark background for card */
-  border-radius: 0.75rem !important;
-}
-
-.theme-senior .badge,
-.theme-senior .badge-emerald {
-  background-color: #166534 !important;
+footer a,
+footer a * {
   color: #ffffff !important;
-  border: 2px solid #ffffff !important;
-  font-size: 1rem !important;
-  padding: 0.35rem 0.75rem !important;
 }
 
-.theme-senior .text-gradient {
-  background: none !important;
-  -webkit-background-clip: unset !important;
-  color: #fde047 !important; /* Plain high visibility yellow */
+footer a svg {
+  color: #10b981 !important;
 }
 
-/* 3. GOVERNMENT/PRO MODE (Mode Dinas) - Structured, elegant serif, gold/blue professional tone */
-.theme-gov {
-  font-family: 'Lora', 'Georgia', serif !important;
+footer a:hover,
+footer a:hover * {
+  color: #34d399 !important;
 }
 
-.theme-gov h1, 
-.theme-gov h2, 
-.theme-gov h3, 
-.theme-gov h4, 
-.theme-gov h5, 
-.theme-gov h6,
-.theme-gov .section-title,
-.theme-gov .text-gradient {
-  font-family: 'Lora', serif !important;
-  font-weight: 700 !important;
-  background: none !important;
-  -webkit-background-clip: unset !important;
-  color: #e2e8f0 !important;
+footer a:hover svg {
+  color: #34d399 !important;
 }
-
-.theme-gov body,
-.theme-gov main {
-  background-color: #0b1329 !important; /* Formal steel-blue background */
-}
-
-.theme-gov .btn-primary {
-  background-color: #1e3a8a !important; /* Formal dark blue */
-  color: #ffffff !important;
-  border: 1px solid #3b82f6 !important;
-  border-radius: 0.25rem !important; /* Sharp corporate edges */
-  font-family: 'Lora', serif !important;
-}
-
-.theme-gov .btn-primary:hover {
-  background-color: #172554 !important;
-}
-
-.theme-gov .btn-outline {
-  border: 1px solid #475569 !important;
-  color: #94a3b8 !important;
-  border-radius: 0.25rem !important;
-  font-family: 'Lora', serif !important;
-}
-
-.theme-gov .btn-outline:hover {
-  border-color: #3b82f6 !important;
-  color: #3b82f6 !important;
-}
-
-.theme-gov .glass-card,
-.theme-gov .glass-card-hover {
-  border: 1px solid #1e293b !important;
-  background-color: #0f172a !important; /* Solid business gray */
-  border-radius: 0.25rem !important;
-}
-

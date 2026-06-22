@@ -30,7 +30,7 @@ export default function AboutPage() {
     switch (audienceMode) {
       case 'anak':
         return {
-          heroTitle: "Kenalan yuk dengan DLHBatu! 🌟",
+          heroTitle: "Kenalan yuk dengan DLH Kota Batu! 🌟",
           heroSubtitle: "Dinas Lingkungan Hidup Kota Batu",
           heroDesc: "Tempat seru untuk belajar menjaga bumi kita agar tetap hijau, bersih, dan sehat! Di sini kamu bisa menukar sampah plastikmu menjadi tabungan yang asyik lho!",
           visionTitle: "3 Misi Keren Kita 💚",
@@ -57,7 +57,7 @@ export default function AboutPage() {
         };
       default:
         return {
-          heroTitle: "Profil DLHBatu",
+          heroTitle: "Profil DLH Kota Batu",
           heroSubtitle: "Dinas Lingkungan Hidup Kota Batu",
           heroDesc: "Platform digital resmi untuk memantau, mengedukasi, dan memfasilitasi program Bank Sampah guna mewujudkan tata kelola lingkungan Kota Batu yang bersih, asri, dan berkelanjutan.",
           visionTitle: "Visi & 3 Pilar Utama Kami",
@@ -92,8 +92,8 @@ export default function AboutPage() {
 
           {!currentUser && (
             <div className="mt-8 flex flex-wrap justify-center gap-4 animate-bounce-subtle">
-              <Link 
-                to="/login" 
+              <Link
+                to="/login"
                 className="btn-primary !px-8 !py-3.5 rounded-2xl text-xs font-bold uppercase tracking-wider shadow-lg shadow-emerald-500/20 hover:scale-105 transition-all flex items-center gap-2"
               >
                 <LogIn className="w-4 h-4" />
@@ -121,10 +121,10 @@ export default function AboutPage() {
               <p className="text-xs uppercase tracking-[0.2em] text-emerald-400 font-bold mb-1">Our Mission & Pillars</p>
               <h2 className="text-2xl md:text-3xl font-bold text-white">{texts.visionTitle}</h2>
             </div>
-            
+
             {/* Modal button to read full vision and mission, keeping the page scroll short */}
             <div className="shrink-0">
-              <ExpandableInfo 
+              <ExpandableInfo
                 title="Visi, Misi & Rencana Strategis DLH"
                 shortText="Baca visi dan misi jangka panjang DLH Kota Batu."
                 buttonText="Lihat Visi & Misi Lengkap"
@@ -159,26 +159,26 @@ export default function AboutPage() {
                   <span className="badge-emerald">{p.focus}</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{p.title}</h3>
-                
+
                 {/* Accordion for individual pillar details */}
                 <ExpandableInfo
                   title={p.title}
                   shortText={
-                    p.num === '01' 
-                      ? 'Mengurangi sampah plastik sekali pakai.' 
-                      : p.num === '02' 
-                      ? 'Meningkatkan ekonomi mandiri warga.' 
-                      : 'Edukasi kebersihan sejak usia dini.'
+                    p.num === '01'
+                      ? 'Mengurangi sampah plastik sekali pakai.'
+                      : p.num === '02'
+                        ? 'Meningkatkan ekonomi mandiri warga.'
+                        : 'Edukasi kebersihan sejak usia dini.'
                   }
                   buttonText="Detail Pilar"
                   useModal={false}
                 >
                   <p className="mt-2 text-slate-300">
-                    {p.num === '01' 
+                    {p.num === '01'
                       ? 'Fokus utama adalah menekan volume sampah organik dan anorganik yang masuk ke TPA Tlekung dengan memperkuat pemilahan mandiri di setiap rumah tangga and pelaku wisata di Kota Batu.'
                       : p.num === '02'
-                      ? 'Melalui mekanisme tabungan sampah yang dapat dikonversi menjadi uang tunai, sembako, atau pembayaran listrik, program ini sukses melahirkan roda ekonomi baru sirkular di pedesaan.'
-                      : 'Kami bekerja sama dengan sekolah-sekolah melalui program Adiwiyata untuk mengajarkan kebiasaan memilah sampah dan membuat pupuk kompos secara praktis.'
+                        ? 'Melalui mekanisme tabungan sampah yang dapat dikonversi menjadi uang tunai, sembako, atau pembayaran listrik, program ini sukses melahirkan roda ekonomi baru sirkular di pedesaan.'
+                        : 'Kami bekerja sama dengan sekolah-sekolah melalui program Adiwiyata untuk mengajarkan kebiasaan memilah sampah dan membuat pupuk kompos secara praktis.'
                     }
                   </p>
                 </ExpandableInfo>
@@ -199,7 +199,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-3 gap-8 items-start">
             <div className="glass-card p-6">
               <h3 className="text-lg font-bold text-white mb-3">Bagaimana Cara Kerja Bank Sampah?</h3>
-              
+
               {/* Short explanation with "Selengkapnya" Modal to keep page scroll short */}
               <ExpandableInfo
                 title="Panduan Alur & Standardisasi Kerja Bank Sampah"
@@ -244,7 +244,7 @@ export default function AboutPage() {
                     useModal={false}
                   >
                     <p className="text-xs text-slate-300 mt-2">
-                      {i === 0 
+                      {i === 0
                         ? 'Setiap gram sampah plastik, logam, dan kertas dicatat menggunakan timbangan digital presisi tinggi. Data ini disinkronisasikan langsung dengan sistem server DLH Kota Batu.'
                         : 'Hasil daur ulang dijual kepada pabrik pengolah mitra DLH, dan keuntungannya disalurkan kembali 100% untuk kas tabungan anggota Bank Sampah tanpa potongan biaya administrasi.'
                       }
@@ -270,7 +270,13 @@ export default function AboutPage() {
               {/* Head Office */}
               <div className="glass-card p-5">
                 <p className="text-xs uppercase tracking-wider text-slate-500 mb-1">Head Office</p>
-                <p className="text-white font-bold text-base">Dinas Lingkungan Hidup Kota Batu</p>
+                <div className="flex items-center gap-3">
+                  <img src="/external/logo_kota_batu.png" alt="Logo Kota Batu" className="w-10 h-10 object-contain rounded" />
+                  <div>
+                    <p className="text-white font-bold text-base">Dinas Lingkungan Hidup Kota Batu</p>
+                    <p className="text-xs text-slate-300 mt-1">Balaikota Among Tani</p>
+                  </div>
+                </div>
                 <p className="text-sm text-slate-300 mt-1">Gedung A, Lantai 2, Balaikota Among Tani</p>
                 <p className="text-sm text-slate-400">Jl. Panglima Sudirman No. 507, Pesanggrahan, Kec. Batu, Kota Batu</p>
               </div>
@@ -318,72 +324,58 @@ export default function AboutPage() {
             </div>
 
             {/* Visual Map / Location Detail */}
-            <div className="rounded-xl overflow-hidden border border-navy-600/30 bg-navy-800/50 relative h-80 lg:h-auto min-h-[320px] flex flex-col justify-between p-6">
-              <div className="absolute inset-0 opacity-20" style={{
-                backgroundImage: `radial-gradient(circle at 50% 60%, #10b981 2px, transparent 2px)`,
-                backgroundSize: '100% 100%',
-              }} />
-              
-              <div className="relative z-10 glass-card px-4 py-3 max-w-xs self-start">
-                <p className="text-sm font-bold text-white">Balaikota Among Tani</p>
-                <p className="text-xs text-slate-400">Pusat Pemerintahan & Kantor DLH Kota Batu</p>
+            <div className="rounded-3xl overflow-hidden border border-navy-600/30 bg-navy-800/80 relative min-h-[420px] lg:min-h-[360px]">
+              <div className="absolute inset-0">
+                <iframe
+                  title="Peta DLH Kota Batu"
+                  src="https://www.google.com/maps?q=Dinas+Lingkungan+Hidup+Kota+Batu&center=-7.8661377,112.5133019&zoom=17&output=embed"
+                  className="w-full h-full"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
 
-              <div className="relative z-10 self-end w-full mt-auto">
-                <ExpandableInfo
-                  title="Petunjuk Rute & Aksesibilitas Lokasi"
-                  shortText="Lihat petunjuk arah berkendara dan akses transportasi umum menuju kantor kami."
-                  buttonText="Petunjuk Arah & Peta Detail"
-                  useModal={true}
-                >
-                  <div className="space-y-4">
-                    <h4 className="font-bold text-emerald-400 text-sm">Petunjuk Jalan:</h4>
-                    <p className="text-slate-300 text-xs leading-relaxed">
-                      Kantor DLH bertempat di kompleks Balaikota Among Tani Gedung A Lantai 2. Kompleks ini terletak di pusat kota, tepatnya di Jl. Panglima Sudirman. Dapat dijangkau menggunakan angkutan umum kota Batu jalur BJL atau menggunakan kendaraan roda 2 dan roda 4 dengan area parkir yang sangat luas dan ramah kursi roda.
-                    </p>
-                    <div className="p-3 bg-navy-950/60 rounded border border-navy-600/30">
-                      <div className="font-bold text-xs text-white mb-0.5">Titik Koordinat GPS:</div>
-                      <code className="text-xs text-emerald-400">-7.871234, 112.526789</code>
+              <div className="relative z-10 p-6 flex flex-col h-full justify-between">
+                <div className="glass-card px-4 py-3 max-w-xs bg-slate-950/90 border border-slate-700 shadow-xl">
+                  <p className="text-sm font-bold text-emerald-100">Balaikota Among Tani</p>
+                  <p className="text-xs text-emerald-200">Pusat Pemerintahan & Kantor DLH Kota Batu</p>
+                </div>
+
+                <div className="relative z-10 self-start w-full max-w-[420px] mt-4">
+                  <ExpandableInfo
+                    title="Petunjuk Rute & Aksesibilitas Lokasi"
+                    shortText="Lihat petunjuk arah berkendara dan akses transportasi umum menuju kantor kami."
+                    buttonText="Petunjuk Arah & Peta Detail"
+                    useModal={true}
+                  >
+                    <div className="space-y-4">
+                      <h4 className="font-bold text-emerald-400 text-sm">Petunjuk Jalan:</h4>
+                      <p className="text-slate-300 text-xs leading-relaxed">
+                        Kantor DLH bertempat di kompleks Balaikota Among Tani Gedung A Lantai 2. Kompleks ini terletak di pusat kota, tepatnya di Jl. Panglima Sudirman. Dapat dijangkau menggunakan angkutan umum kota Batu jalur BJL atau menggunakan kendaraan roda 2 dan roda 4 dengan area parkir yang sangat luas dan ramah kursi roda.
+                      </p>
+                      <div className="p-3 bg-navy-950/70 rounded border border-navy-600/30">
+                        <div className="font-bold text-xs text-white mb-1">Titik Koordinat GPS:</div>
+                        <div className="flex flex-wrap items-center gap-2 text-[10px] text-emerald-100">
+                          <code className="text-emerald-300">-7.8661377, 112.5133019</code>
+                          <a
+                            href="https://www.google.com/maps/place/Dinas+Lingkungan+Hidup+Kota+Batu/@-7.8661377,112.5133019,17z/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="btn-outline text-[10px] !px-2 !py-1"
+                          >
+                            Lihat di Peta
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </ExpandableInfo>
+                  </ExpandableInfo>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mini Footer Explore */}
-      <section className="py-12 border-t border-navy-600/20">
-        <div className="page-container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-slate-500 font-bold mb-4">Navigasi Cepat</p>
-              <ul className="space-y-2 text-sm">
-                <li><Link to="/" className="text-slate-400 hover:text-emerald-400 transition-colors">Halaman Utama</Link></li>
-                <li><Link to="/dashboard-statistics" className="text-slate-400 hover:text-emerald-400 transition-colors">Statistik Pengelolaan</Link></li>
-                <li><Link to="/directory" className="text-slate-400 hover:text-emerald-400 transition-colors">Direktori Unit</Link></li>
-                <li><Link to="/schedule" className="text-slate-400 hover:text-emerald-400 transition-colors">Jadwal Pengangkutan</Link></li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-slate-500 font-bold mb-4">Media Sosial Resmi</p>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-slate-400 hover:text-emerald-400 transition-colors">Instagram DLH Batu</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-emerald-400 transition-colors">Facebook Fans Page</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-emerald-400 transition-colors">YouTube Channel DLH</a></li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-slate-500 font-bold mb-4">Layanan Pengaduan</p>
-              <p className="text-xs text-slate-400 mb-1">Email Resmi:</p>
-              <p className="text-sm text-white mb-3 font-semibold">dlh@batukota.go.id</p>
-              <p className="text-xs text-slate-400 mb-1">Hotline Telp:</p>
-              <p className="text-sm text-white font-semibold">(0341) 592200</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

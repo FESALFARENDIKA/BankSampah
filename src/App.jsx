@@ -16,6 +16,8 @@ import LayananPublikPage from './pages/LayananPublikPage';
 import AdminDashboardPage from './pages/AdminDashboardPage';
 import LoginPage from './pages/LoginPage';
 
+
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
@@ -34,6 +36,8 @@ export default function App() {
           <Route path="/layanan-publik" element={<LayananPublikPage />} />
           <Route path="/dashboard-statistics" element={<DashboardPage />} />
           <Route path="/guest-book" element={<GuestBookPage />} />
+
+
           <Route path="/galeri-kegiatan" element={<ActivitiesPage />} />
           <Route path="/activity/:id" element={<ActivityDetailPage />} />
           <Route path="/education-guidelines" element={<EducationPage />} />

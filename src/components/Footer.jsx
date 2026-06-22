@@ -1,5 +1,12 @@
 import { Link } from 'react-router-dom';
-import { Leaf, Instagram, Facebook, Youtube, MapPin, Phone, Mail } from 'lucide-react';
+import { Leaf, Instagram, Youtube, MapPin, Phone, Mail } from 'lucide-react';
+
+const TikTokIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+    <path d="M9 18V5l12-1v7" />
+    <circle cx="9" cy="18" r="3" />
+  </svg>
+);
 
 const quickLinks = [
   { label: 'Dashboard Statistics', path: '/dashboard-statistics' },
@@ -17,48 +24,60 @@ const services = [
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-950 border-t border-navy-600/30 mt-20">
+    <footer className="bg-emerald-900 border-t border-emerald-700/50 mt-20 text-white">
       <div className="page-container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
-                <Leaf className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-lg font-bold text-white">
-                DLH<span className="text-emerald-400">Batu</span>
+            <Link to="/" className="flex items-center gap-3 mb-4">
+              <img
+                src="/external/logo_kota_batu.png"
+                alt="DLH Kota Batu"
+                className="w-10 h-10 object-contain"
+              />
+              <span className="text-lg font-bold">
+                <span className="text-white">DLH </span>
+                <span className="text-emerald-300">Kota Batu</span>
               </span>
             </Link>
-            <p className="text-slate-400 text-sm leading-relaxed mb-6">
+            <p className="text-white/85 text-sm leading-relaxed mb-6">
               Sistem Informasi & Pengelolaan Bank Sampah Dinas Lingkungan Hidup Kota Batu.
               Mewujudkan kota yang bersih, hijau, dan berkelanjutan.
             </p>
             <div className="flex gap-3">
-              {[Instagram, Facebook, Youtube].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-10 h-10 rounded-full bg-navy-800 border border-navy-600/50 flex items-center justify-center text-slate-400 hover:text-emerald-400 hover:border-emerald-500/30 transition-all"
-                >
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-emerald-700/40 border border-emerald-400/50 flex items-center justify-center text-emerald-300 hover:text-white hover:bg-emerald-600 hover:border-emerald-300 transition-all"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-emerald-700/40 border border-emerald-400/50 flex items-center justify-center text-emerald-300 hover:text-white hover:bg-emerald-600 hover:border-emerald-300 transition-all"
+              >
+                <TikTokIcon />
+              </a>
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-emerald-700/40 border border-emerald-400/50 flex items-center justify-center text-emerald-300 hover:text-white hover:bg-emerald-600 hover:border-emerald-300 transition-all"
+              >
+                <Youtube className="w-4 h-4" />
+              </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold text-slate-200 uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               Quick Links
             </h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.path}>
                   <Link
-                    to={link.path}
-                    className="text-sm text-slate-400 hover:text-emerald-400 transition-colors"
-                  >
+                      to={link.path}
+                      className="text-sm text-white hover:text-emerald-300 transition-colors"
+                    >
                     {link.label}
                   </Link>
                 </li>
@@ -68,7 +87,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-sm font-semibold text-slate-200 uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               Services
             </h3>
             <ul className="space-y-3">
@@ -76,7 +95,7 @@ export default function Footer() {
                 <li key={i}>
                   <Link
                     to={link.path}
-                    className="text-sm text-slate-400 hover:text-emerald-400 transition-colors"
+                    className="text-sm text-white hover:text-emerald-300 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -87,23 +106,23 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-sm font-semibold text-slate-200 uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               Contact Us
             </h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
-                <span className="text-sm text-slate-400">
+                <MapPin className="w-4 h-4 text-emerald-300 mt-0.5 shrink-0" />
+                <span className="text-sm text-white">
                   Balaikota Among Tani, Gedung B Lantai 2, Jl. Panglima Sudirman No.507, Pesanggrahan, Kota Batu
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span className="text-sm text-slate-400">(0341) 596000</span>
+                <Phone className="w-4 h-4 text-emerald-300 shrink-0" />
+                <span className="text-sm text-white">(0341) 596000</span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span className="text-sm text-slate-400">dlh@batukota.go.id</span>
+                <Mail className="w-4 h-4 text-emerald-300 shrink-0" />
+                <span className="text-sm text-white">dlh@batukota.go.id</span>
               </li>
             </ul>
           </div>
@@ -111,16 +130,16 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-navy-600/20">
+      <div className="border-t border-emerald-700/50">
         <div className="page-container py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-white">
             © 2023 Dinas Lingkungan Hidup Kota Batu. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-sm text-slate-500 hover:text-slate-300 transition-colors">
+            <a href="#" className="text-sm text-white hover:text-emerald-300 transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-sm text-slate-500 hover:text-slate-300 transition-colors">
+            <a href="#" className="text-sm text-white hover:text-emerald-300 transition-colors">
               Terms of Service
             </a>
           </div>

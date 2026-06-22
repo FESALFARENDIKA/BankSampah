@@ -56,7 +56,7 @@ export default function LandingPage() {
                 <Leaf className="w-4 h-4 text-emerald-400" />
                 <span className="text-sm text-emerald-400 font-medium">Dinas Lingkungan Hidup Kota Batu</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-100 leading-tight mb-6">
                 Sistem Informasi{' '}
                 <span className="text-gradient">Bank Sampah</span>
               </h1>
@@ -110,7 +110,7 @@ export default function LandingPage() {
             {quickStats.map((stat, i) => (
               <div key={i} className="glass-card p-6 text-center group hover:border-emerald-500/30 transition-all duration-300">
                 <stat.icon className="w-8 h-8 text-emerald-400 mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                <p className="text-2xl md:text-3xl font-bold text-white">
+                <p className="text-2xl md:text-3xl font-bold text-slate-100">
                   {stat.value}
                   {stat.unit && <span className="text-sm font-normal text-slate-400 ml-1">{stat.unit}</span>}
                 </p>
@@ -140,7 +140,7 @@ export default function LandingPage() {
                 <div className="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-emerald-500/20 transition-colors">
                   <svc.icon className="w-6 h-6 text-emerald-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{svc.title}</h3>
+                <h3 className="text-lg font-semibold text-slate-100 mb-2">{svc.title}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed">{svc.description}</p>
                 <div className="mt-4 flex items-center text-emerald-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                   Explore <ChevronRight className="w-4 h-4 ml-1" />
@@ -191,7 +191,7 @@ export default function LandingPage() {
                       {item.readTime}
                     </span>
                   </div>
-                  <h3 className="font-semibold text-white mb-2 group-hover:text-emerald-400 transition-colors line-clamp-2">
+                  <h3 className="font-semibold text-slate-100 mb-2 group-hover:text-emerald-400 transition-colors line-clamp-2">
                     {item.title}
                   </h3>
                   <p className="text-sm text-slate-400 line-clamp-2">{item.description}</p>
@@ -217,7 +217,7 @@ export default function LandingPage() {
             <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-transparent" />
             <div className="relative z-10">
               <Recycle className="w-12 h-12 text-emerald-400 mx-auto mb-6" />
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4">
                 Bergabunglah dengan Program Bank Sampah
               </h2>
               <p className="text-slate-400 max-w-2xl mx-auto mb-8">

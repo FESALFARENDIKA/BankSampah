@@ -6,6 +6,7 @@ export default function RegistrationPage() {
   const [showToast, setShowToast] = useState(false);
   const [form, setForm] = useState({
     bankName: '', district: '', village: '', address: '', postalCode: '',
+    coordinates: '',
     managerName: '', managerPhone: '', managerEmail: '',
     memberCount: '', established: '', description: '',
     materials: [],
@@ -27,6 +28,7 @@ export default function RegistrationPage() {
     setShowToast(true);
     setForm({
       bankName: '', district: '', village: '', address: '', postalCode: '',
+      coordinates: '',
       managerName: '', managerPhone: '', managerEmail: '',
       memberCount: '', established: '', description: '',
       materials: [],
@@ -78,6 +80,11 @@ export default function RegistrationPage() {
                 <label className="block text-sm font-medium text-slate-300 mb-1.5">Full Address *</label>
                 <textarea rows={2} required value={form.address} onChange={(e) => setForm({ ...form, address: e.target.value })} placeholder="Jl. Panglima Sudirman No. 12, RT 03 RW 05..." className="input-field resize-none" />
               </div>
+              <div className="md:col-span-2">
+                <label className="block text-sm font-medium text-slate-300 mb-1.5">Koordinat Google Maps</label>
+                <input type="text" value={form.coordinates} onChange={(e) => setForm({ ...form, coordinates: e.target.value })} placeholder="-7.8661377, 112.5133019" className="input-field" />
+                <p className="text-xs text-slate-400 mt-1">Format: latitude, longitude. Contoh: -7.8661377, 112.5133019</p>
+              </div>
               <div>
                 <label className="block text-sm font-medium text-slate-300 mb-1.5">Postal Code</label>
                 <input type="text" value={form.postalCode} onChange={(e) => setForm({ ...form, postalCode: e.target.value })} placeholder="65313" className="input-field" />
@@ -127,8 +134,8 @@ export default function RegistrationPage() {
                 <FileText className="w-5 h-5 text-amber-400" />
               </div>
               <div>
-                <h2 className="text-lg font-semibold text-white">Accepted Materials</h2>
-                <p className="text-sm text-slate-400">Select the types of waste this bank will collect</p>
+                <h2 className="text-lg font-semibold text-white">Jenis Sampah Diterima</h2>
+                <p className="text-sm text-slate-400">Pilih jenis sampah yang akan dikumpulkan oleh bank ini.</p>
               </div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
