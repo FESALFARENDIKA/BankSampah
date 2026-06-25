@@ -1,3 +1,3 @@
 AKUN :
-Usernaame : admin, password : admin123
-Usernaame : warga.batu, password : password
+Username : admin, password : admin123
+Username : warga.batu, password : password
