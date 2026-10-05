@@ -448,9 +448,6 @@ export default function LoginPage() {
             </div>
           )}
 
-          <div className="mt-4 p-2 bg-slate-50 rounded-lg border border-slate-200 text-[9px] text-slate-500 text-center">
-            Tips: Gunakan username <strong>admin</strong> (password: <strong>admin123</strong>) atau <strong>dosen</strong> (password: <strong>dosen123</strong>) untuk akses Admin.
-          </div>
         </div>
 
       </div>
