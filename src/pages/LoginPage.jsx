@@ -195,7 +195,7 @@ export default function LoginPage() {
             <div className="flex items-center gap-2 mb-6">
               <div className="w-9 h-9 rounded-xl flex items-center justify-center backdrop-blur-sm">
                 <img
-                  src="/external/logo_kota_batu.png"
+                  src="/logo_kota_batu.png"
                   alt="DLH Kota Batu"
                   className="w-full h-full object-contain"
                 />
@@ -447,7 +447,6 @@ export default function LoginPage() {
               </div>
             </div>
           )}
-
         </div>
 
       </div>

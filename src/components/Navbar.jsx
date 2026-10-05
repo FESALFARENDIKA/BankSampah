@@ -129,9 +129,10 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16" ref={dropdownRef}>
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group shrink-0">
-            <img src="/external/logo_kota_batu.png" alt="DLH Kota Batu" className="w-8 h-8 object-contain rounded" />
-            <span className="text-lg font-bold text-white">
-              DLH <span className="text-black font-semibold">Kota Batu</span>
+            <img src="/logo_kota_batu.png" alt="DLH Kota Batu" className="w-8 h-8 object-contain rounded" />
+            <span className="text-lg font-bold text-emerald-950 flex items-center gap-1.5">
+              <span>DLH</span>
+              <span className="text-emerald-700 font-semibold">Kota Batu</span>
             </span>
           </Link>
 
@@ -148,8 +149,8 @@ export default function Navbar() {
               className={`px-3 py-2 text-sm font-semibold rounded-md transition-all duration-200 flex items-center gap-1 ${
                 activeDropdown === 'profil' ||
                 ['/profil-dlh', '/guest-book', '/admin-dashboard'].includes(location.pathname)
-                  ? 'text-emerald-800 bg-white/60 hover:bg-white/60'
-                  : 'text-white hover:text-emerald-100 hover:bg-white/50'
+                  ? 'text-emerald-800 bg-emerald-100/80'
+                  : 'text-slate-800 hover:text-emerald-800 hover:bg-emerald-100/50'
               }`}
               >
                 PROFIL <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'profil' ? 'rotate-180' : ''}`} />
@@ -201,8 +202,8 @@ export default function Navbar() {
               <button
                 onClick={() => toggleDropdown('layanan')}
                 className={`px-3 py-2 text-sm font-semibold rounded-md transition-all duration-200 flex items-center gap-1 ${activeDropdown === 'layanan' || ['/layanan-publik', '/directory', '/schedule'].includes(location.pathname)
-                    ? 'text-emerald-800 bg-white/60 hover:bg-white/60'
-                    : 'text-white hover:text-emerald-100 hover:bg-white/50'
+                    ? 'text-emerald-800 bg-emerald-100/80'
+                    : 'text-slate-800 hover:text-emerald-800 hover:bg-emerald-100/50'
                   }`}
               >
                 LAYANAN <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'layanan' ? 'rotate-180' : ''}`} />
@@ -239,8 +240,8 @@ export default function Navbar() {
               <button
                 onClick={() => toggleDropdown('edukasi')}
                 className={`px-3 py-2 text-sm font-semibold rounded-md transition-all duration-200 flex items-center gap-1 ${activeDropdown === 'edukasi' || ['/dashboard-statistics', '/galeri-kegiatan', '/education-guidelines'].includes(location.pathname)
-                    ? 'text-emerald-800 bg-white/60 hover:bg-white/60'
-                    : 'text-white hover:text-emerald-100 hover:bg-white/50'
+                    ? 'text-emerald-800 bg-emerald-100/80'
+                    : 'text-slate-800 hover:text-emerald-800 hover:bg-emerald-100/50'
                   }`}
               >
                 DATA & EDUKASI <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'edukasi' ? 'rotate-180' : ''}`} />
@@ -271,8 +272,8 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             {currentUser ? (
               <div className="flex items-center gap-3">
-                <div className="flex items-center gap-1.5 text-xs text-white font-semibold">
-                  <User className="w-3.5 h-3.5 text-white" />
+                <div className="flex items-center gap-1.5 text-xs text-slate-800 font-semibold">
+                  <User className="w-3.5 h-3.5 text-emerald-700" />
                   <span>Halo, {currentUser.role === 'admin' ? 'Administrator' : 'Warga'}!</span>
                   {/* Hapus badge "Admin" karena sudah ada label "Halo, Administrator!" */}
                 </div>
@@ -317,7 +318,7 @@ export default function Navbar() {
             <div className="space-y-4 pt-2">
               {/* Profil Group */}
               <div>
-                <div className="text-xs text-slate-500 font-bold px-4 uppercase tracking-wider mb-1">
+                <div className="text-xs text-emerald-900 font-bold px-4 uppercase tracking-wider mb-1">
                   {menuGroups.profil.label}
                 </div>
                 <div className="space-y-1">
@@ -327,11 +328,11 @@ export default function Navbar() {
                       to={item.path}
                       onClick={() => setIsOpen(false)}
                       className={`block px-6 py-2 text-sm rounded-lg transition-all ${location.pathname === item.path
-                          ? 'text-emerald-400 bg-navy-800'
-                          : 'text-slate-300 hover:text-emerald-300'
+                          ? 'text-emerald-900 bg-emerald-100 font-bold'
+                          : 'text-slate-800 hover:text-emerald-800 hover:bg-emerald-100/50'
                         }`}
                     >
-                      <span className={item.path === '/admin-dashboard' ? 'text-red-400 font-bold' : ''}>
+                      <span className={item.path === '/admin-dashboard' ? 'text-red-600 font-bold' : ''}>
                         {item.label}
                       </span>
                     </Link>
@@ -341,7 +342,7 @@ export default function Navbar() {
 
               {/* Layanan Group */}
               <div>
-                <div className="text-xs text-slate-500 font-bold px-4 uppercase tracking-wider mb-1">
+                <div className="text-xs text-emerald-900 font-bold px-4 uppercase tracking-wider mb-1">
                   {menuGroups.layanan.label}
                 </div>
                 <div className="space-y-1">
@@ -351,8 +352,8 @@ export default function Navbar() {
                       to={item.path}
                       onClick={() => setIsOpen(false)}
                       className={`block px-6 py-2 text-sm rounded-lg transition-all ${location.pathname === item.path
-                          ? 'text-emerald-400 bg-navy-800'
-                          : 'text-slate-300 hover:text-emerald-300'
+                          ? 'text-emerald-900 bg-emerald-100 font-bold'
+                          : 'text-slate-800 hover:text-emerald-800 hover:bg-emerald-100/50'
                         }`}
                     >
                       {item.label}
@@ -363,7 +364,7 @@ export default function Navbar() {
 
               {/* Edukasi Group */}
               <div>
-                <div className="text-xs text-slate-500 font-bold px-4 uppercase tracking-wider mb-1">
+                <div className="text-xs text-emerald-900 font-bold px-4 uppercase tracking-wider mb-1">
                   {menuGroups.edukasi.label}
                 </div>
                 <div className="space-y-1">
@@ -373,8 +374,8 @@ export default function Navbar() {
                       to={item.path}
                       onClick={() => setIsOpen(false)}
                       className={`block px-6 py-2 text-sm rounded-lg transition-all ${location.pathname === item.path
-                          ? 'text-emerald-400 bg-navy-800'
-                          : 'text-slate-300 hover:text-emerald-300'
+                          ? 'text-emerald-900 bg-emerald-100 font-bold'
+                          : 'text-slate-800 hover:text-emerald-800 hover:bg-emerald-100/50'
                         }`}
                     >
                       {item.label}

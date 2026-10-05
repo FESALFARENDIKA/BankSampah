@@ -31,7 +31,7 @@ export default function Footer() {
           <div>
             <Link to="/" className="flex items-center gap-3 mb-4">
               <img
-                src="/external/logo_kota_batu.png"
+                src="/logo_kota_batu.png"
                 alt="DLH Kota Batu"
                 className="w-10 h-10 object-contain"
               />
