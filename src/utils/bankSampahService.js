@@ -7,41 +7,41 @@
  */
 
 export const validateBankForm = (form) => {
-  const errors = {};
+  const errors = {}; // S1
 
   // 1. Multi-Condition: Kode BSU harus sesuai prefix kecamatan
-  const prefixMap = { Batu: 'BATU-', Junrejo: 'JUN-', Bumiaji: 'BUM-' };
-  const expectedPrefix = prefixMap[form.district] || 'BATU-';
-  if (!form.code || !form.code.trim().toUpperCase().startsWith(expectedPrefix)) {
-    errors.code = `Kecamatan ${form.district} mewajibkan kode BSU diawali "${expectedPrefix}" (contoh: ${expectedPrefix}01)`;
+  const prefixMap = { Batu: 'BATU-', Junrejo: 'JUN-', Bumiaji: 'BUM-' }; // S2
+  const expectedPrefix = prefixMap[form.district] || 'BATU-'; // S3
+  if (!form.code || !form.code.trim().toUpperCase().startsWith(expectedPrefix)) { // S4 (D1)
+    errors.code = `Kecamatan ${form.district} mewajibkan kode BSU diawali "${expectedPrefix}" (contoh: ${expectedPrefix}01)`; // S5
   }
 
   // 2. Multi-Condition: Aturan berdasarkan Status Operasional
-  if (form.status === 'Vakum' || form.status === 'Tidak Aktif') {
-    if (!form.statusReason || form.statusReason.trim().length < 10) {
-      errors.statusReason = `Untuk status "${form.status}", kolom Alasan / Kendala wajib diisi minimal 10 karakter.`;
+  if (form.status === 'Vakum' || form.status === 'Tidak Aktif') { // S6 (D2)
+    if (!form.statusReason || form.statusReason.trim().length < 10) { // S7 (D3)
+      errors.statusReason = `Untuk status "${form.status}", kolom Alasan / Kendala wajib diisi minimal 10 karakter.`; // S8
     }
-  } else if (form.status === 'Aktif') {
-    if (!form.manager || !form.manager.trim()) {
-      errors.manager = 'Nama penanggung jawab wajib diisi untuk status Aktif.';
+  } else if (form.status === 'Aktif') { // S9 (D4)
+    if (!form.manager || !form.manager.trim()) { // S10 (D5)
+      errors.manager = 'Nama penanggung jawab wajib diisi untuk status Aktif.'; // S11
     }
-    const cleanPhone = (form.phone || '').replace(/\D/g, '');
-    if (!cleanPhone || cleanPhone.length < 10) {
-      errors.phone = 'Nomor telepon wajib minimal 10 digit angka untuk unit Aktif.';
+    const cleanPhone = (form.phone || '').replace(/\D/g, ''); // S12
+    if (!cleanPhone || cleanPhone.length < 10) { // S13 (D6)
+      errors.phone = 'Nomor telepon wajib minimal 10 digit angka untuk unit Aktif.'; // S14
     }
-    const hasWaste =
+    const hasWaste = // S15
       (parseFloat(form.plastic) || 0) > 0 ||
       (parseFloat(form.paper) || 0) > 0 ||
       (parseFloat(form.iron) || 0) > 0 ||
       (parseFloat(form.bottle) || 0) > 0 ||
       (parseFloat(form.glass) || 0) > 0 ||
       (parseFloat(form.oil) || 0) > 0;
-    if (!hasWaste) {
-      errors.waste = 'Unit berstatus Aktif wajib memiliki minimal satu jenis setoran sampah > 0 kg.';
+    if (!hasWaste) { // S16 (D7)
+      errors.waste = 'Unit berstatus Aktif wajib memiliki minimal satu jenis setoran sampah > 0 kg.'; // S17
     }
   }
 
-  return errors;
+  return errors; // S18
 };
 
 export const calculateWasteVolume = (form) => {

@@ -300,7 +300,7 @@ describe('createBankSampah - Test Double Implementation (Stub, Fake, Mock)', () 
     expect(result.message).toBe('Harap lengkapi Kode, Nama BSU, dan Alamat!');
   });
 
-  it('should register Vakum BSU with 0 volume and record storage write via Spy', async () => {
+  it('should register Vakum BSU with 0 volume and save breakdown to FakeLocalStorage', async () => {
     // Arrange
     const vakumBank = {
       district: 'Bumiaji',
@@ -315,8 +315,6 @@ describe('createBankSampah - Test Double Implementation (Stub, Fake, Mock)', () 
       insertBankSampah: async (payload) => ({ data: [{ id: 202, ...payload }], error: null }),
     };
     const fakeStorage = new FakeLocalStorage();
-    // Test Double 4: SPY (observes real FakeLocalStorage.setItem without replacing its behavior)
-    const setItemSpy = vi.spyOn(fakeStorage, 'setItem');
     const notifierMock = { notify: vi.fn() };
 
     // Act
@@ -329,10 +327,9 @@ describe('createBankSampah - Test Double Implementation (Stub, Fake, Mock)', () 
     // Assert
     expect(result.ok).toBe(true);
     expect(result.volume).toBe(0);
-    expect(setItemSpy).toHaveBeenCalledTimes(1);
     const saved = JSON.parse(fakeStorage.getItem('bank_sampah_breakdowns'));
     expect(saved['202'].plastic).toBe('0');
     expect(saved['202'].statusReason).toBe('Sedang menunggu SK pengurus baru');
-    setItemSpy.mockRestore();
+    expect(notifierMock.notify).toHaveBeenCalledTimes(1);
   });
 });
