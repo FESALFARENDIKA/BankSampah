@@ -6,5 +6,13 @@ export default defineConfig({
   server: {
     port: 5173,
     open: true
+  },
+  test: {
+    environment: 'node',
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'html'],
+      include: ['src/utils/**/*.js']
+    }
   }
 })
